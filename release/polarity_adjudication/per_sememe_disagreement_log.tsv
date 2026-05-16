@@ -1,0 +1,56 @@
+idx	sememe_id	label_en	label_zh	R1	R2	R3	R4	n_unique	adjudicated_verdict	adjudication_type	hownet_hint
+1	emotion|情感	emotion	情感	U	U	P	P	2	U	2-2 tie → HowNet S_C/S_E hint	U
+2	feeling|情绪	feeling	情绪	U	U	N	P	3	U	2-of-4 plurality (others split)	U
+3	experience|感受	experience	感受	U	U	U	U	1	U	4-of-4 majority	U
+4	perception|感知	perception	感知	U	U	U	U	1	U	4-of-4 majority	U
+5	sense|感觉	sense	感觉	U	U	U	U	1	U	4-of-4 majority	U
+6	Countenance|表情	Countenance	表情	U	U	P	U	2	U	3-of-4 majority	U
+7	ShowEmotion|表示情感	ShowEmotion	表示情感	U	U	P	U	2	U	3-of-4 majority	U
+8	ShowGoodEmotion|表示好情感	ShowGoodEmotion	表示好情感	P	P	P	P	1	P	4-of-4 majority	P
+9	ShowBadEmotion|表示坏情感	ShowBadEmotion	表示坏情感	N	N	N	N	1	N	4-of-4 majority	N
+10	EmotionalityValue|感情特性值	EmotionalityValue	感情特性值	U	U	U	P	2	U	3-of-4 majority	U
+11	FeelingByGood|好情	FeelingByGood	好情	P	P	P	P	1	P	4-of-4 majority	P
+12	FeelingByBad|坏情	FeelingByBad	坏情	N	N	N	N	1	N	4-of-4 majority	N
+13	fear|害怕	fear	害怕	N	N	N	N	1	N	4-of-4 majority	N
+14	joyful|喜悦	joyful	喜悦	P	P	P	P	1	P	4-of-4 majority	P
+15	miserable|悲惨	miserable	悲惨	N	N	N	N	1	N	4-of-4 majority	N
+16	sorrowful|悲哀	sorrowful	悲哀	N	N	N	N	1	N	4-of-4 majority	N
+17	happy|幸福	happy	幸福	P	P	P	P	1	P	4-of-4 majority	P
+18	sad|忧愁	sad	忧愁	N	N	N	N	1	N	4-of-4 majority	N
+19	lonely|孤	lonely	孤	N	N	N	N	1	N	4-of-4 majority	N
+20	shy|羞愧	shy	羞愧	N	N	N	N	1	N	4-of-4 majority	N
+21	shameless|没羞	shameless	没羞	N	U	N	N	2	N	3-of-4 majority	N
+22	Pride|傲气	Pride	傲气	P	P	N	N	2	P	2-2 tie → HowNet S_C/S_E hint	P
+23	arrogant|傲	arrogant	傲	N	P	N	N	2	N	3-of-4 majority	N
+24	calm|镇静	calm	镇静	U	P	P	P	2	P	3-of-4 majority	P
+25	ardent|热情	ardent	热情	P	P	P	P	1	P	4-of-4 majority	P
+26	passionate|有情	passionate	有情	P	P	P	P	1	P	4-of-4 majority	P
+27	optimistic|乐观	optimistic	乐观	P	P	P	P	1	P	4-of-4 majority	P
+28	pessimistic|悲观	pessimistic	悲观	N	N	N	N	1	N	4-of-4 majority	N
+29	FondOf|喜欢	FondOf	喜欢	P	P	P	P	1	P	4-of-4 majority	P
+30	love|爱	love	爱	P	P	P	P	1	P	4-of-4 majority	P
+31	BeInLove|恋爱	BeInLove	恋爱	P	P	P	P	1	P	4-of-4 majority	P
+32	like|爱惜	like	爱惜	P	P	P	P	1	P	4-of-4 majority	P
+33	hate|仇恨	hate	仇恨	N	N	N	N	1	N	4-of-4 majority	N
+34	disgust|厌恶	disgust	厌恶	N	N	N	N	1	N	4-of-4 majority	N
+35	jealous|妒忌	jealous	妒忌	N	N	N	N	1	N	4-of-4 majority	N
+36	grateful|感激	grateful	感激	P	P	P	P	1	P	4-of-4 majority	P
+37	regret|抱歉	regret	抱歉	N	N	N	N	1	N	4-of-4 majority	N
+38	worried|着急	worried	着急	N	U	N	N	2	N	3-of-4 majority	N
+39	surprise|惊奇	surprise	惊奇	P	P	P	P	1	P	4-of-4 majority	U
+40	excite|感动	excite	感动	P	P	P	P	1	P	4-of-4 majority	U
+41	enjoy|享受	enjoy	享受	P	P	P	P	1	P	4-of-4 majority	P
+42	SeekPleasure|寻欢	SeekPleasure	寻欢	P	P	P	P	1	P	4-of-4 majority	P
+43	ShowJoy|示喜	ShowJoy	示喜	P	P	P	P	1	P	4-of-4 majority	P
+44	ShowLove|示爱	ShowLove	示爱	P	P	P	P	1	P	4-of-4 majority	P
+45	ExpressAnger|示怒	ExpressAnger	示怒	N	N	N	N	1	N	4-of-4 majority	N
+46	tease|取乐	tease	取乐	N	P	P	N	2	P	2-2 tie → HowNet S_C/S_E hint	P
+47	willing|愿意	willing	愿意	P	P	P	P	1	P	4-of-4 majority	U
+48	unwilling|不愿	unwilling	不愿	N	N	N	N	1	N	4-of-4 majority	U
+49	voluntary|自愿	voluntary	自愿	P	P	P	P	1	P	4-of-4 majority	U
+50	aspiration|意愿	aspiration	意愿	P	U	U	P	2	U	2-2 tie → HowNet S_C/S_E hint	U
+51	eager|急切	eager	急切	N	U	N	N	2	N	3-of-4 majority	U
+52	urgent|急	urgent	急	N	N	N	U	2	N	3-of-4 majority	U
+53	Urgency|缓急	Urgency	缓急	N	N	U	U	2	U	2-2 tie → HowNet S_C/S_E hint	U
+54	hopeful|有望	hopeful	有望	P	P	P	P	1	P	4-of-4 majority	P
+55	irritate|激怒	irritate	激怒	N	N	N	N	1	N	4-of-4 majority	N
