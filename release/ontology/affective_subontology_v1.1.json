@@ -1,5 +1,5 @@
 {
-  "version": "v1.1",
+  "version": "v1.2",
   "generated_at": "2026-05-15",
   "method": "4-rater independent blind polarity rating + majority vote with HowNet S_C/S_E hint tiebreaker",
   "raters": [
@@ -14,67 +14,5808 @@
   "n_nodes_3of4_majority": 49,
   "n_nodes_plurality_2_1_1": 1,
   "n_nodes_tiebreaker": 5,
-  "nodes_polarity_adjudicated": {
-    "emotion|情感": "U",
-    "feeling|情绪": "U",
-    "experience|感受": "U",
-    "perception|感知": "U",
-    "sense|感觉": "U",
-    "Countenance|表情": "U",
-    "ShowEmotion|表示情感": "U",
-    "ShowGoodEmotion|表示好情感": "P",
-    "ShowBadEmotion|表示坏情感": "N",
-    "EmotionalityValue|感情特性值": "U",
-    "FeelingByGood|好情": "P",
-    "FeelingByBad|坏情": "N",
-    "fear|害怕": "N",
-    "joyful|喜悦": "P",
-    "miserable|悲惨": "N",
-    "sorrowful|悲哀": "N",
-    "happy|幸福": "P",
-    "sad|忧愁": "N",
-    "lonely|孤": "N",
-    "shy|羞愧": "N",
-    "shameless|没羞": "N",
-    "Pride|傲气": "P",
-    "arrogant|傲": "N",
-    "calm|镇静": "P",
-    "ardent|热情": "P",
-    "passionate|有情": "P",
-    "optimistic|乐观": "P",
-    "pessimistic|悲观": "N",
-    "FondOf|喜欢": "P",
-    "love|爱": "P",
-    "BeInLove|恋爱": "P",
-    "like|爱惜": "P",
-    "hate|仇恨": "N",
-    "disgust|厌恶": "N",
-    "jealous|妒忌": "N",
-    "grateful|感激": "P",
-    "regret|抱歉": "N",
-    "worried|着急": "N",
-    "surprise|惊奇": "P",
-    "excite|感动": "P",
-    "enjoy|享受": "P",
-    "SeekPleasure|寻欢": "P",
-    "ShowJoy|示喜": "P",
-    "ShowLove|示爱": "P",
-    "ExpressAnger|示怒": "N",
-    "tease|取乐": "P",
-    "willing|愿意": "P",
-    "unwilling|不愿": "N",
-    "voluntary|自愿": "P",
-    "aspiration|意愿": "U",
-    "eager|急切": "N",
-    "urgent|急": "N",
-    "Urgency|缓急": "U",
-    "hopeful|有望": "P",
-    "irritate|激怒": "N"
-  },
   "krippendorff_alpha_ordinal": 0.8415,
   "krippendorff_alpha_nominal": 0.7456,
   "krippendorff_alpha_interpretation_ordinal": "firm-reliability range (>= 0.800; Krippendorff 2018)",
   "krippendorff_alpha_interpretation_nominal": "tentative-reliability range (0.667 <= alpha < 0.800)",
   "preferred_metric": "ordinal",
-  "preferred_metric_rationale": "Polarity is an ordered category (negative < neutral < positive); 11 of 15 disagreements are adjacent (P<->U or U<->N), 4 antipodal (P<->N) — ordinal metric properly weights disagreement distance."
+  "preferred_metric_rationale": "Polarity is an ordered category (negative < neutral < positive); 11 of 15 disagreements are adjacent (P<->U or U<->N), 4 antipodal (P<->N) — ordinal metric properly weights disagreement distance.",
+  "release_note": "Enriched with role-typed DEF-tree edges and frequency grounding from the source extraction. Polarity adjudication fields are unchanged from v1.1.",
+  "source_ontology": "extracted_subontology_v0.json",
+  "n_role_edges_total": 686,
+  "role_edge_counts_global": {
+    "modifier": 96,
+    "content": 96,
+    "CoEvent": 83,
+    "manner": 61,
+    "scope": 43,
+    "domain": 29,
+    "adjunct": 20,
+    "agent": 20,
+    "target": 20,
+    "host": 18,
+    "time": 17,
+    "degree": 17,
+    "patient": 15,
+    "means": 14,
+    "cause": 14,
+    "experiencer": 14,
+    "RelateTo": 13,
+    "location": 8,
+    "ResultEvent": 8,
+    "whole": 6,
+    "instrument": 5,
+    "purpose": 5,
+    "partner": 5,
+    "duration": 5,
+    "quantity": 4,
+    "possession": 4,
+    "result": 3,
+    "condition": 3,
+    "PlaceSect": 3,
+    "restrictive": 3,
+    "TimeSect": 3,
+    "existent": 2,
+    "ResultIsa": 2,
+    "PartPosition": 2,
+    "PatientValue": 2,
+    "LocationFin": 2,
+    "concession": 2,
+    "belong": 2,
+    "PartOfTouch": 1,
+    "LocationIni": 1,
+    "StateFin": 1,
+    "StateIni": 1,
+    "descriptive": 1,
+    "frequency": 1,
+    "sequence": 1,
+    "TimeFeature": 1,
+    "coagent": 1,
+    "HostOf": 1,
+    "isa": 1,
+    "TimeBefore": 1,
+    "but": 1,
+    "concerning": 1,
+    "AccordingTo": 1,
+    "possessor": 1,
+    "direction": 1
+  },
+  "nodes": [
+    {
+      "node_id": "emotion|情感",
+      "label_en": "emotion",
+      "label_zh": "情感",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 1023,
+      "frequency": 1023,
+      "role_edge_counts": {
+        "CoEvent": 15,
+        "manner": 3,
+        "RelateTo": 1,
+        "adjunct": 3,
+        "patient": 1,
+        "time": 1,
+        "domain": 1,
+        "modifier": 2,
+        "content": 2,
+        "existent": 1
+      },
+      "neighbor_sememes": [
+        "EachOther|相互",
+        "FondOf|喜欢",
+        "accidental|偶发",
+        "all|全",
+        "amiable|友善",
+        "angry|生气",
+        "antagonistic|不容",
+        "believe|相信",
+        "cherish|心怀",
+        "document|文书",
+        "drop|投下",
+        "endeavour|卖力",
+        "excited|激动",
+        "exist|存在",
+        "express|表示",
+        "fact|事情",
+        "feeling|情绪",
+        "hate|仇恨",
+        "human|人",
+        "impossible|不会",
+        "intimate|亲密",
+        "joyful|喜悦",
+        "like|爱惜",
+        "loyal|忠孝",
+        "mass|众",
+        "mixed|杂",
+        "neg|否",
+        "optimistic|乐观",
+        "ordinary|普通",
+        "politics|政"
+      ],
+      "example_sense_ids": [
+        "000000017971",
+        "000000018801",
+        "000000025233",
+        "000000025234",
+        "000000025235"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "excited|激动"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "excited|激动",
+          "to_sememe": "accidental|偶发"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "feeling|情绪"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "believe|相信"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "believe|相信",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "drop|投下"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "drop|投下",
+          "to_sememe": "document|文书"
+        },
+        {
+          "role": "time",
+          "from_sememe": "drop|投下",
+          "to_sememe": "select|选拔"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "fact|事情",
+          "to_sememe": "politics|政"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "strong|强"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "cherish|心怀",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "content",
+          "from_sememe": "cherish|心怀",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "antagonistic|不容"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "unsatisfied|不满"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "treacherous|逆"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "uneasy|不安"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "uneasy|不安",
+          "to_sememe": "serious|严重"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "respect|敬佩"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "loyal|忠孝"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "angry|生气"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "optimistic|乐观"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "exist|存在",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "existent",
+          "from_sememe": "exist|存在",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "exist|存在",
+          "to_sememe": "all|全"
+        },
+        {
+          "role": "content",
+          "from_sememe": "seek|谋取",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "endeavour|卖力"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "feeling|情绪",
+      "label_en": "feeling",
+      "label_zh": "情绪",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 63,
+      "frequency": 64,
+      "role_edge_counts": {
+        "RelateTo": 2,
+        "modifier": 1
+      },
+      "neighbor_sememes": [
+        "EmotionalityValue|感情特性值",
+        "emotion|情感",
+        "mixed|杂"
+      ],
+      "example_sense_ids": [
+        "000000018801",
+        "000000036331",
+        "000000038031",
+        "000000038034",
+        "000000038046"
+      ],
+      "role_edges": [
+        {
+          "role": "RelateTo",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "feeling|情绪"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "mixed|杂"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "feeling|情绪"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "experience|感受",
+      "label_en": "experience",
+      "label_zh": "感受",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 296,
+      "frequency": 297,
+      "role_edge_counts": {
+        "CoEvent": 10,
+        "content": 6,
+        "RelateTo": 1,
+        "domain": 5,
+        "whole": 1,
+        "ResultIsa": 1,
+        "patient": 1,
+        "modifier": 4,
+        "location": 1
+      },
+      "neighbor_sememes": [
+        "AlterLocation|变空间位置",
+        "AnimalHuman|动物",
+        "Circumstances|境况",
+        "IllTreat|慢待",
+        "InstitutePlace|场所",
+        "Temperature|温度",
+        "believe|相信",
+        "biology|生物学",
+        "commerce|商业",
+        "dangerous|危",
+        "excited|激动",
+        "fact|事情",
+        "free|自由",
+        "human|人",
+        "joyful|喜悦",
+        "knowledge|知识",
+        "look|看",
+        "misfortunate|倒霉",
+        "neg|否",
+        "original|原",
+        "painful|疼痛",
+        "part|部件",
+        "perception|感知",
+        "physiology|生理学",
+        "public|共",
+        "regard|认为",
+        "religion|宗教",
+        "safe|安",
+        "sorrowful|悲哀",
+        "speak|说"
+      ],
+      "example_sense_ids": [
+        "000000018236",
+        "000000018237",
+        "000000018238",
+        "000000018239",
+        "000000026106"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "safe|安"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "experience|感受",
+          "to_sememe": "part|部件"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "part|部件",
+          "to_sememe": "physiology|生理学"
+        },
+        {
+          "role": "whole",
+          "from_sememe": "part|部件",
+          "to_sememe": "AnimalHuman|动物"
+        },
+        {
+          "role": "ResultIsa",
+          "from_sememe": "regard|认为",
+          "to_sememe": "experience|感受"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "regard|认为",
+          "to_sememe": "fact|事情"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "fact|事情",
+          "to_sememe": "specific|特定"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "painful|疼痛"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "Temperature|温度"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "commerce|商业"
+        },
+        {
+          "role": "location",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "undergo|经受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "experience|感受"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "believe|相信"
+        },
+        {
+          "role": "content",
+          "from_sememe": "believe|相信",
+          "to_sememe": "knowledge|知识"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "believe|相信",
+          "to_sememe": "thinking|思想"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "believe|相信",
+          "to_sememe": "thought|念头"
+        },
+        {
+          "role": "content",
+          "from_sememe": "speak|说",
+          "to_sememe": "experience|感受"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "misfortunate|倒霉"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "tired|疲乏"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "experience|感受",
+          "to_sememe": "free|自由"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "experience|感受",
+          "to_sememe": "public|共"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "excited|激动"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "experience|感受",
+          "to_sememe": "biology|生物学"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "suffer|遭受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "IllTreat|慢待"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "experience|感受",
+          "to_sememe": "original|原"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "perception|感知",
+      "label_en": "perception",
+      "label_zh": "感知",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 330,
+      "frequency": 331,
+      "role_edge_counts": {
+        "adjunct": 1,
+        "content": 10,
+        "means": 4,
+        "scope": 4,
+        "CoEvent": 1,
+        "manner": 2,
+        "RelateTo": 2,
+        "domain": 3,
+        "whole": 1,
+        "cause": 1,
+        "experiencer": 1
+      },
+      "neighbor_sememes": [
+        "AnimalHuman|动物",
+        "Circumstances|境况",
+        "HungryThirsty|饥渴",
+        "Temperature|温度",
+        "able|能",
+        "blurred|浑",
+        "cold|冷",
+        "dangerous|危",
+        "difficult|难",
+        "entertainment|艺",
+        "experience|感受",
+        "human|人",
+        "important|重要",
+        "impossible|不会",
+        "investigate|调查",
+        "listen|听",
+        "literature|文",
+        "look|看",
+        "neg|否",
+        "part|部件",
+        "physiology|生理学",
+        "readings|读物",
+        "research|研究",
+        "safe|安",
+        "self|己",
+        "shiver|颤动",
+        "situated|处于",
+        "suffer|遭受",
+        "swollen|肿胀",
+        "thing|万物"
+      ],
+      "example_sense_ids": [
+        "000000017591",
+        "000000025578",
+        "000000025720",
+        "000000025721",
+        "000000026106"
+      ],
+      "role_edges": [
+        {
+          "role": "adjunct",
+          "from_sememe": "perception|感知",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "important|重要"
+        },
+        {
+          "role": "means",
+          "from_sememe": "perception|感知",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "impossible|不会",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "$"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "unable|庸",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "safe|安"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "difficult|难",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "means",
+          "from_sememe": "perception|感知",
+          "to_sememe": "listen|听"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "look|看",
+          "to_sememe": "self|己"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "experience|感受",
+          "to_sememe": "part|部件"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "part|部件",
+          "to_sememe": "physiology|生理学"
+        },
+        {
+          "role": "whole",
+          "from_sememe": "part|部件",
+          "to_sememe": "AnimalHuman|动物"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "Temperature|温度"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "perception|感知",
+          "to_sememe": "blurred|浑"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "cold|冷"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "shiver|颤动",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "content",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "HungryThirsty|饥渴"
+        },
+        {
+          "role": "content",
+          "from_sememe": "perception|感知",
+          "to_sememe": "Circumstances|境况"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "perception|感知",
+          "to_sememe": "readings|读物"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "readings|读物",
+          "to_sememe": "entertainment|艺"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "readings|读物",
+          "to_sememe": "literature|文"
+        },
+        {
+          "role": "means",
+          "from_sememe": "perception|感知",
+          "to_sememe": "investigate|调查"
+        },
+        {
+          "role": "means",
+          "from_sememe": "perception|感知",
+          "to_sememe": "research|研究"
+        },
+        {
+          "role": "content",
+          "from_sememe": "thing|万物",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "perception|感知"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "sense|感觉",
+      "label_en": "sense",
+      "label_zh": "感觉",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 18,
+      "frequency": 19,
+      "role_edge_counts": {
+        "whole": 3,
+        "instrument": 1,
+        "domain": 1,
+        "content": 2,
+        "PartPosition": 1,
+        "scope": 3,
+        "time": 1,
+        "manner": 2,
+        "modifier": 1
+      },
+      "neighbor_sememes": [
+        "AnimalHuman|动物",
+        "Strength|力量",
+        "Taste|味道",
+        "able|能",
+        "abnormal|不正常",
+        "attentive|专注",
+        "beast|走兽",
+        "direct|直接",
+        "eat|吃",
+        "entity|实体",
+        "experience|感受",
+        "implement|器具",
+        "part|部件",
+        "physiology|生理学",
+        "press|按压",
+        "viscera|脏"
+      ],
+      "example_sense_ids": [
+        "000000041434",
+        "000000041435",
+        "000000058871",
+        "000000069940",
+        "000000079629"
+      ],
+      "role_edges": [
+        {
+          "role": "whole",
+          "from_sememe": "part|部件",
+          "to_sememe": "implement|器具"
+        },
+        {
+          "role": "instrument",
+          "from_sememe": "part|部件",
+          "to_sememe": "sense|感觉"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "part|部件",
+          "to_sememe": "physiology|生理学"
+        },
+        {
+          "role": "whole",
+          "from_sememe": "part|部件",
+          "to_sememe": "beast|走兽"
+        },
+        {
+          "role": "whole",
+          "from_sememe": "part|部件",
+          "to_sememe": "AnimalHuman|动物"
+        },
+        {
+          "role": "content",
+          "from_sememe": "sense|感觉",
+          "to_sememe": "Strength|力量"
+        },
+        {
+          "role": "PartPosition",
+          "from_sememe": "part|部件",
+          "to_sememe": "viscera|脏"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "sense|感觉",
+          "to_sememe": "Taste|味道"
+        },
+        {
+          "role": "time",
+          "from_sememe": "sense|感觉",
+          "to_sememe": "eat|吃"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "sense|感觉",
+          "to_sememe": "attentive|专注"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "sense|感觉"
+        },
+        {
+          "role": "content",
+          "from_sememe": "sense|感觉",
+          "to_sememe": "$"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "sense|感觉",
+          "to_sememe": "direct|直接"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "abnormal|不正常",
+          "to_sememe": "sense|感觉"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "experience|感受",
+          "to_sememe": "abnormal|不正常"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "Countenance|表情",
+      "label_en": "Countenance",
+      "label_zh": "表情",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 99,
+      "frequency": 100,
+      "role_edge_counts": {
+        "scope": 8,
+        "host": 2,
+        "modifier": 4,
+        "domain": 1,
+        "patient": 1,
+        "time": 1,
+        "cause": 2,
+        "content": 2,
+        "means": 1,
+        "experiencer": 1,
+        "manner": 1
+      },
+      "neighbor_sememes": [
+        "AnimalHuman|动物",
+        "alter|改变",
+        "angry|生气",
+        "austere|冷峻",
+        "benevolent|仁",
+        "emotion|情感",
+        "entertainment|艺",
+        "fear|害怕",
+        "fierce|暴",
+        "guess|猜测",
+        "guilty|有罪",
+        "human|人",
+        "joyful|喜悦",
+        "kill|杀害",
+        "laugh|笑",
+        "look|看",
+        "perform|表演",
+        "sad|忧愁",
+        "severe|严厉",
+        "shy|羞愧",
+        "speak|说",
+        "tired|疲乏",
+        "wicked|歹"
+      ],
+      "example_sense_ids": [
+        "000000025260",
+        "000000046362",
+        "000000046363",
+        "000000046368",
+        "000000054352"
+      ],
+      "role_edges": [
+        {
+          "role": "scope",
+          "from_sememe": "severe|严厉",
+          "to_sememe": "Countenance|表情"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "severe|严厉",
+          "to_sememe": "speak|说"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "tired|疲乏"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "austere|冷峻"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "fierce|暴"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "alter|改变",
+          "to_sememe": "entertainment|艺"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "alter|改变",
+          "to_sememe": "Countenance|表情"
+        },
+        {
+          "role": "time",
+          "from_sememe": "alter|改变",
+          "to_sememe": "perform|表演"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "angry|生气"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "AnimalHuman|动物"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "laugh|笑"
+        },
+        {
+          "role": "content",
+          "from_sememe": "guess|猜测",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "means",
+          "from_sememe": "guess|猜测",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "content",
+          "from_sememe": "look|看",
+          "to_sememe": "Countenance|表情"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "sad|忧愁"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "wicked|歹"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "fear|害怕"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "shy|羞愧"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "shy|羞愧"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "benevolent|仁"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "kill|杀害"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "kill|杀害",
+          "to_sememe": "guilty|有罪"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "ShowEmotion|表示情感",
+      "label_en": "ShowEmotion",
+      "label_zh": "表示情感",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 39,
+      "frequency": 40,
+      "role_edge_counts": {
+        "domain": 2,
+        "modifier": 2,
+        "purpose": 1,
+        "content": 2,
+        "CoEvent": 4,
+        "manner": 1
+      },
+      "neighbor_sememes": [
+        "ComeTogether|集聚",
+        "GreaterThanNormal|高于正常",
+        "angry|生气",
+        "emotion|情感",
+        "extensive|泛",
+        "fact|事情",
+        "hate|仇恨",
+        "pity|怜悯",
+        "politics|政"
+      ],
+      "example_sense_ids": [
+        "000000033293",
+        "000000043314",
+        "000000047131",
+        "000000047132",
+        "000000055826"
+      ],
+      "role_edges": [
+        {
+          "role": "domain",
+          "from_sememe": "ComeTogether|集聚",
+          "to_sememe": "politics|政"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "ComeTogether|集聚",
+          "to_sememe": "extensive|泛"
+        },
+        {
+          "role": "purpose",
+          "from_sememe": "ComeTogether|集聚",
+          "to_sememe": "ShowEmotion|表示情感"
+        },
+        {
+          "role": "content",
+          "from_sememe": "ShowEmotion|表示情感",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "angry|生气"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "ComeTogether|集聚"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "ShowEmotion|表示情感"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "fact|事情",
+          "to_sememe": "politics|政"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "fact|事情",
+          "to_sememe": "extensive|泛"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "ShowEmotion|表示情感",
+          "to_sememe": "GreaterThanNormal|高于正常"
+        },
+        {
+          "role": "content",
+          "from_sememe": "ShowEmotion|表示情感",
+          "to_sememe": "pity|怜悯"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "ShowGoodEmotion|表示好情感",
+      "label_en": "ShowGoodEmotion",
+      "label_zh": "表示好情感",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 12,
+      "frequency": 13,
+      "role_edge_counts": {
+        "content": 1,
+        "time": 1,
+        "PartOfTouch": 1,
+        "PartPosition": 1,
+        "domain": 1,
+        "modifier": 1,
+        "whole": 1,
+        "purpose": 1,
+        "means": 1
+      },
+      "neighbor_sememes": [
+        "AnimalHuman|动物",
+        "beat|打",
+        "body|身",
+        "expression|词语",
+        "express|表示",
+        "hand|手",
+        "hind|后",
+        "human|人",
+        "part|部件",
+        "physiology|生理学"
+      ],
+      "example_sense_ids": [
+        "000000019016",
+        "000000019017",
+        "000000098144",
+        "000000140720",
+        "000000217285"
+      ],
+      "role_edges": [
+        {
+          "role": "content",
+          "from_sememe": "expression|词语",
+          "to_sememe": "express|表示"
+        },
+        {
+          "role": "time",
+          "from_sememe": "express|表示",
+          "to_sememe": "ShowGoodEmotion|表示好情感"
+        },
+        {
+          "role": "PartOfTouch",
+          "from_sememe": "beat|打",
+          "to_sememe": "part|部件"
+        },
+        {
+          "role": "PartPosition",
+          "from_sememe": "part|部件",
+          "to_sememe": "body|身"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "part|部件",
+          "to_sememe": "physiology|生理学"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "part|部件",
+          "to_sememe": "hind|后"
+        },
+        {
+          "role": "whole",
+          "from_sememe": "part|部件",
+          "to_sememe": "AnimalHuman|动物"
+        },
+        {
+          "role": "purpose",
+          "from_sememe": "beat|打",
+          "to_sememe": "ShowGoodEmotion|表示好情感"
+        },
+        {
+          "role": "means",
+          "from_sememe": "ShowGoodEmotion|表示好情感",
+          "to_sememe": "beat|打"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "ShowBadEmotion|表示坏情感",
+      "label_en": "ShowBadEmotion",
+      "label_zh": "表示坏情感",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 33,
+      "frequency": 34,
+      "role_edge_counts": {},
+      "neighbor_sememes": [],
+      "example_sense_ids": [
+        "000000081234",
+        "000000081235",
+        "000000081236",
+        "000000081237",
+        "000000094210"
+      ],
+      "role_edges": [],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "EmotionalityValue|感情特性值",
+      "label_en": "EmotionalityValue",
+      "label_zh": "感情特性值",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 19,
+      "frequency": 20,
+      "role_edge_counts": {
+        "CoEvent": 5,
+        "RelateTo": 1,
+        "manner": 2,
+        "LocationIni": 1
+      },
+      "neighbor_sememes": [
+        "GoOut|出去",
+        "angry|生气",
+        "excited|激动",
+        "fear|害怕",
+        "feeling|情绪",
+        "sorrowful|悲哀",
+        "surprise|惊奇",
+        "walk|走"
+      ],
+      "example_sense_ids": [
+        "000000061628",
+        "000000061629",
+        "000000128168",
+        "000000130906",
+        "000000131605"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "excited|激动"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "angry|生气"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "feeling|情绪"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "walk|走",
+          "to_sememe": "EmotionalityValue|感情特性值"
+        },
+        {
+          "role": "LocationIni",
+          "from_sememe": "GoOut|出去",
+          "to_sememe": "?"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "GoOut|出去",
+          "to_sememe": "EmotionalityValue|感情特性值"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "surprise|惊奇"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "EmotionalityValue|感情特性值",
+          "to_sememe": "fear|害怕"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "FeelingByGood|好情",
+      "label_en": "FeelingByGood",
+      "label_zh": "好情",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 12,
+      "frequency": 13,
+      "role_edge_counts": {},
+      "neighbor_sememes": [],
+      "example_sense_ids": [
+        "000000051737",
+        "000000051738",
+        "000000051739",
+        "000000051740",
+        "000000098214"
+      ],
+      "role_edges": [],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "FeelingByBad|坏情",
+      "label_en": "FeelingByBad",
+      "label_zh": "坏情",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 84,
+      "frequency": 85,
+      "role_edge_counts": {
+        "PatientValue": 1,
+        "scope": 1,
+        "domain": 2,
+        "modifier": 1,
+        "content": 1,
+        "CoEvent": 1,
+        "manner": 1
+      },
+      "neighbor_sememes": [
+        "AptTo|易于",
+        "BehaviorValue|举止值",
+        "CauseToDo|使动",
+        "PropertyValue|特性值",
+        "emotion|情感",
+        "entertainment|艺",
+        "literature|文",
+        "readings|读物"
+      ],
+      "example_sense_ids": [
+        "000000026601",
+        "000000026602",
+        "000000026608",
+        "000000026609",
+        "000000026610"
+      ],
+      "role_edges": [
+        {
+          "role": "PatientValue",
+          "from_sememe": "CauseToDo|使动",
+          "to_sememe": "PropertyValue|特性值"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "PropertyValue|特性值",
+          "to_sememe": "AptTo|易于"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "readings|读物",
+          "to_sememe": "entertainment|艺"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "readings|读物",
+          "to_sememe": "literature|文"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "readings|读物",
+          "to_sememe": "PropertyValue|特性值"
+        },
+        {
+          "role": "content",
+          "from_sememe": "AptTo|易于",
+          "to_sememe": "FeelingByBad|坏情"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "FeelingByBad|坏情"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "BehaviorValue|举止值",
+          "to_sememe": "FeelingByBad|坏情"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "fear|害怕",
+      "label_en": "fear",
+      "label_zh": "害怕",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 413,
+      "frequency": 414,
+      "role_edge_counts": {
+        "adjunct": 1,
+        "cause": 1,
+        "time": 1,
+        "content": 2,
+        "scope": 1,
+        "ResultEvent": 1,
+        "agent": 1,
+        "CoEvent": 3,
+        "target": 1,
+        "modifier": 1,
+        "degree": 1
+      },
+      "neighbor_sememes": [
+        "Circumstances|境况",
+        "Islam|伊斯兰教",
+        "able|能",
+        "dangerous|危",
+        "disease|疾病",
+        "dream|做梦",
+        "emotion|情感",
+        "extreme|极",
+        "human|人",
+        "information|信息",
+        "neg|否",
+        "phenomena|现象",
+        "religion|宗教",
+        "shiver|颤动",
+        "undergo|经受",
+        "urge|促使",
+        "wrong|误"
+      ],
+      "example_sense_ids": [
+        "000000025877",
+        "000000026164",
+        "000000026165",
+        "000000026395",
+        "000000026424"
+      ],
+      "role_edges": [
+        {
+          "role": "adjunct",
+          "from_sememe": "fear|害怕",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "shiver|颤动",
+          "to_sememe": "fear|害怕"
+        },
+        {
+          "role": "time",
+          "from_sememe": "fear|害怕",
+          "to_sememe": "undergo|经受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "Circumstances|境况"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "urge|促使"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "urge|促使",
+          "to_sememe": "fear|害怕"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "urge|促使",
+          "to_sememe": "information|信息"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "disease|疾病",
+          "to_sememe": "fear|害怕"
+        },
+        {
+          "role": "target",
+          "from_sememe": "fear|害怕",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "fear|害怕"
+        },
+        {
+          "role": "content",
+          "from_sememe": "dream|做梦",
+          "to_sememe": "phenomena|现象"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "phenomena|现象",
+          "to_sememe": "dream|做梦"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "phenomena|现象",
+          "to_sememe": "able|能"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "fear|害怕",
+          "to_sememe": "extreme|极"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "joyful|喜悦",
+      "label_en": "joyful",
+      "label_zh": "喜悦",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 480,
+      "frequency": 481,
+      "role_edge_counts": {
+        "experiencer": 1,
+        "modifier": 1,
+        "quantity": 1,
+        "CoEvent": 3,
+        "PatientValue": 1,
+        "adjunct": 1,
+        "degree": 1,
+        "content": 3,
+        "result": 1,
+        "condition": 1
+      },
+      "neighbor_sememes": [
+        "BehaviorValue|举止值",
+        "ComeToWorld|问世",
+        "emotion|情感",
+        "extreme|极",
+        "fact|事情",
+        "forget|忘记",
+        "human|人",
+        "ize|变性态",
+        "mass|众",
+        "neg|否",
+        "ordinary|普通",
+        "place|地方",
+        "sorrowful|悲哀",
+        "undergo|经受"
+      ],
+      "example_sense_ids": [
+        "000000018903",
+        "000000019850",
+        "000000026311",
+        "000000026375",
+        "000000026376"
+      ],
+      "role_edges": [
+        {
+          "role": "experiencer",
+          "from_sememe": "joyful|喜悦",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "ordinary|普通"
+        },
+        {
+          "role": "quantity",
+          "from_sememe": "human|人",
+          "to_sememe": "mass|众"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "BehaviorValue|举止值",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "PatientValue",
+          "from_sememe": "ize|变性态",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "joyful|喜悦",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "joyful|喜悦",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "result",
+          "from_sememe": "joyful|喜悦",
+          "to_sememe": "forget|忘记"
+        },
+        {
+          "role": "content",
+          "from_sememe": "forget|忘记",
+          "to_sememe": "place|地方"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "content",
+          "from_sememe": "forget|忘记",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "condition",
+          "from_sememe": "sorrowful|悲哀",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "joyful|喜悦"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "miserable|悲惨",
+      "label_en": "miserable",
+      "label_zh": "悲惨",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 342,
+      "frequency": 343,
+      "role_edge_counts": {
+        "manner": 1,
+        "host": 2,
+        "modifier": 5,
+        "content": 1,
+        "patient": 1,
+        "location": 1,
+        "PlaceSect": 1
+      },
+      "neighbor_sememes": [
+        "Circumstances|境况",
+        "country|国家",
+        "defeat|战胜",
+        "die|死",
+        "foreign|外国",
+        "group|群体",
+        "human|人",
+        "lonely|孤",
+        "native|本土",
+        "place|地方",
+        "suffer|遭受"
+      ],
+      "example_sense_ids": [
+        "000000018114",
+        "000000025972",
+        "000000025973",
+        "000000025974",
+        "000000026338"
+      ],
+      "role_edges": [
+        {
+          "role": "manner",
+          "from_sememe": "die|死",
+          "to_sememe": "miserable|悲惨"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "group|群体"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "miserable|悲惨"
+        },
+        {
+          "role": "content",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "Circumstances|境况"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "place|地方",
+          "to_sememe": "miserable|悲惨"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "defeat|战胜",
+          "to_sememe": "Circumstances|境况"
+        },
+        {
+          "role": "location",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "place|地方"
+        },
+        {
+          "role": "PlaceSect",
+          "from_sememe": "place|地方",
+          "to_sememe": "country|国家"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "place|地方",
+          "to_sememe": "native|本土"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "place|地方"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "place|地方",
+          "to_sememe": "foreign|外国"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "sorrowful|悲哀",
+      "label_en": "sorrowful",
+      "label_zh": "悲哀",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 244,
+      "frequency": 245,
+      "role_edge_counts": {
+        "degree": 2,
+        "manner": 3,
+        "result": 1,
+        "content": 1,
+        "condition": 1,
+        "scope": 1,
+        "ResultEvent": 1,
+        "CoEvent": 2,
+        "StateFin": 1,
+        "StateIni": 1
+      },
+      "neighbor_sememes": [
+        "CauseToDo|使动",
+        "Strength|力量",
+        "able|能",
+        "alter|改变",
+        "cry|喊",
+        "experience|感受",
+        "extreme|极",
+        "forget|忘记",
+        "joyful|喜悦",
+        "miserable|悲惨",
+        "sigh|叹气",
+        "weep|哭泣"
+      ],
+      "example_sense_ids": [
+        "000000019117",
+        "000000026051",
+        "000000026052",
+        "000000026053",
+        "000000027017"
+      ],
+      "role_edges": [
+        {
+          "role": "degree",
+          "from_sememe": "sorrowful|悲哀",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "weep|哭泣",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "result",
+          "from_sememe": "joyful|喜悦",
+          "to_sememe": "forget|忘记"
+        },
+        {
+          "role": "content",
+          "from_sememe": "forget|忘记",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "condition",
+          "from_sememe": "sorrowful|悲哀",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "joyful|喜悦",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "CauseToDo|使动"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "CauseToDo|使动",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "joyful|喜悦"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "StateFin",
+          "from_sememe": "alter|改变",
+          "to_sememe": "Strength|力量"
+        },
+        {
+          "role": "StateIni",
+          "from_sememe": "alter|改变",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "cry|喊",
+          "to_sememe": "sorrowful|悲哀"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "sigh|叹气",
+          "to_sememe": "sorrowful|悲哀"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "happy|幸福",
+      "label_en": "happy",
+      "label_zh": "幸福",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 160,
+      "frequency": 161,
+      "role_edge_counts": {
+        "modifier": 8,
+        "location": 1,
+        "agent": 1,
+        "content": 1,
+        "host": 1,
+        "ResultIsa": 1,
+        "patient": 1,
+        "time": 1,
+        "CoEvent": 1
+      },
+      "neighbor_sememes": [
+        "GetMarried|结婚",
+        "Living|生活状况",
+        "aged|老年",
+        "beautiful|美",
+        "enjoy|享受",
+        "fact|事情",
+        "future|将来",
+        "healthy|康健",
+        "humanized|拟人",
+        "human|人",
+        "mishap|劫难",
+        "place|地方",
+        "regard|认为",
+        "reside|住下",
+        "rich|富",
+        "time|时间"
+      ],
+      "example_sense_ids": [
+        "000000024203",
+        "000000028078",
+        "000000028079",
+        "000000033777",
+        "000000033778"
+      ],
+      "role_edges": [
+        {
+          "role": "modifier",
+          "from_sememe": "place|地方",
+          "to_sememe": "beautiful|美"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "place|地方",
+          "to_sememe": "happy|幸福"
+        },
+        {
+          "role": "location",
+          "from_sememe": "place|地方",
+          "to_sememe": "reside|住下"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "reside|住下",
+          "to_sememe": "humanized|拟人"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "Living|生活状况"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "happy|幸福"
+        },
+        {
+          "role": "ResultIsa",
+          "from_sememe": "regard|认为",
+          "to_sememe": "happy|幸福"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "regard|认为",
+          "to_sememe": "mishap|劫难"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "future|将来"
+        },
+        {
+          "role": "time",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "aged|老年"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "GetMarried|结婚"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "fact|事情",
+          "to_sememe": "happy|幸福"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "time|时间",
+          "to_sememe": "happy|幸福"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "time|时间",
+          "to_sememe": "healthy|康健"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "time|时间",
+          "to_sememe": "rich|富"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "sad|忧愁",
+      "label_en": "sad",
+      "label_zh": "忧愁",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 115,
+      "frequency": 116,
+      "role_edge_counts": {
+        "means": 1,
+        "patient": 2,
+        "CoEvent": 1,
+        "cause": 1,
+        "time": 1,
+        "host": 1,
+        "scope": 1,
+        "domain": 1,
+        "agent": 1,
+        "ResultEvent": 1,
+        "RelateTo": 1
+      },
+      "neighbor_sememes": [
+        "BeInLove|恋爱",
+        "CauseToDo|使动",
+        "Countenance|表情",
+        "alcohol|酒",
+        "drink|喝",
+        "emotion|情感",
+        "entertainment|艺",
+        "farewell|离别",
+        "human|人",
+        "remove|消除",
+        "shows|表演物"
+      ],
+      "example_sense_ids": [
+        "000000046316",
+        "000000046317",
+        "000000046318",
+        "000000058364",
+        "000000058418"
+      ],
+      "role_edges": [
+        {
+          "role": "means",
+          "from_sememe": "remove|消除",
+          "to_sememe": "drink|喝"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "drink|喝",
+          "to_sememe": "alcohol|酒"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "remove|消除",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "sad|忧愁"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "sad|忧愁",
+          "to_sememe": "farewell|离别"
+        },
+        {
+          "role": "time",
+          "from_sememe": "drink|喝",
+          "to_sememe": "sad|忧愁"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "sad|忧愁"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "shows|表演物",
+          "to_sememe": "entertainment|艺"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "shows|表演物",
+          "to_sememe": "CauseToDo|使动"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "CauseToDo|使动",
+          "to_sememe": "sad|忧愁"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "BeInLove|恋爱"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "lonely|孤",
+      "label_en": "lonely",
+      "label_zh": "孤",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 99,
+      "frequency": 100,
+      "role_edge_counts": {
+        "location": 1,
+        "patient": 1,
+        "modifier": 5,
+        "domain": 2,
+        "manner": 2,
+        "LocationFin": 1,
+        "PlaceSect": 1
+      },
+      "neighbor_sememes": [
+        "GoInto|进入",
+        "InstitutePlace|场所",
+        "ProvideFor|供养",
+        "aged|老年",
+        "army|军队",
+        "child|少儿",
+        "city|市",
+        "emotion|情感",
+        "enemy|敌",
+        "fight|争斗",
+        "human|人",
+        "military|军",
+        "place|地方"
+      ],
+      "example_sense_ids": [
+        "000000027690",
+        "000000033288",
+        "000000040776",
+        "000000041933",
+        "000000041934"
+      ],
+      "role_edges": [
+        {
+          "role": "location",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "ProvideFor|供养"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "ProvideFor|供养",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "lonely|孤"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "army|军队",
+          "to_sememe": "military|军"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "army|军队",
+          "to_sememe": "lonely|孤"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "fight|争斗",
+          "to_sememe": "military|军"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "fight|争斗",
+          "to_sememe": "lonely|孤"
+        },
+        {
+          "role": "LocationFin",
+          "from_sememe": "GoInto|进入",
+          "to_sememe": "enemy|敌"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "GoInto|进入",
+          "to_sememe": "lonely|孤"
+        },
+        {
+          "role": "PlaceSect",
+          "from_sememe": "place|地方",
+          "to_sememe": "city|市"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "place|地方",
+          "to_sememe": "lonely|孤"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "lonely|孤"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "aged|老年"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "shy|羞愧",
+      "label_en": "shy",
+      "label_zh": "羞愧",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 123,
+      "frequency": 124,
+      "role_edge_counts": {
+        "CoEvent": 1,
+        "modifier": 2,
+        "content": 1,
+        "time": 1,
+        "partner": 1,
+        "cause": 1,
+        "host": 1,
+        "experiencer": 1,
+        "scope": 1
+      },
+      "neighbor_sememes": [
+        "Countenance|表情",
+        "emotion|情感",
+        "grateful|感激",
+        "human|人",
+        "meet|会面",
+        "serious|严重",
+        "undergo|经受",
+        "unfamiliar|不熟悉"
+      ],
+      "example_sense_ids": [
+        "000000035678",
+        "000000035679",
+        "000000072530",
+        "000000073089",
+        "000000073090"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "shy|羞愧"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "serious|严重"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "shy|羞愧"
+        },
+        {
+          "role": "time",
+          "from_sememe": "shy|羞愧",
+          "to_sememe": "meet|会面"
+        },
+        {
+          "role": "partner",
+          "from_sememe": "meet|会面",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "shy|羞愧",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "unfamiliar|不熟悉"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "shy|羞愧"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Countenance|表情",
+          "to_sememe": "shy|羞愧"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "shameless|没羞",
+      "label_en": "shameless",
+      "label_zh": "没羞",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 58,
+      "frequency": 59,
+      "role_edge_counts": {
+        "scope": 2,
+        "degree": 1,
+        "experiencer": 1
+      },
+      "neighbor_sememes": [
+        "CourtesyValue|礼貌值",
+        "PropertyValue|特性值",
+        "extreme|极",
+        "human|人"
+      ],
+      "example_sense_ids": [
+        "000000026144",
+        "000000026145",
+        "000000026980",
+        "000000026981",
+        "000000027299"
+      ],
+      "role_edges": [
+        {
+          "role": "scope",
+          "from_sememe": "CourtesyValue|礼貌值",
+          "to_sememe": "shameless|没羞"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "PropertyValue|特性值",
+          "to_sememe": "shameless|没羞"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "shameless|没羞",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "shameless|没羞"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "Pride|傲气",
+      "label_en": "Pride",
+      "label_zh": "傲气",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 13,
+      "frequency": 14,
+      "role_edge_counts": {
+        "host": 1,
+        "modifier": 2
+      },
+      "neighbor_sememes": [
+        "arrogant|傲",
+        "enemy|敌",
+        "human|人"
+      ],
+      "example_sense_ids": [
+        "000000047958",
+        "000000047959",
+        "000000047960",
+        "000000083644",
+        "000000150084"
+      ],
+      "role_edges": [
+        {
+          "role": "host",
+          "from_sememe": "Pride|傲气",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "enemy|敌"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Pride|傲气",
+          "to_sememe": "arrogant|傲"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "arrogant|傲",
+      "label_en": "arrogant",
+      "label_zh": "傲",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 254,
+      "frequency": 255,
+      "role_edge_counts": {
+        "adjunct": 1
+      },
+      "neighbor_sememes": [
+        "neg|否"
+      ],
+      "example_sense_ids": [
+        "000000025163",
+        "000000025164",
+        "000000025165",
+        "000000025444",
+        "000000025445"
+      ],
+      "role_edges": [
+        {
+          "role": "adjunct",
+          "from_sememe": "arrogant|傲",
+          "to_sememe": "neg|否"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "calm|镇静",
+      "label_en": "calm",
+      "label_zh": "镇静",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 88,
+      "frequency": 89,
+      "role_edge_counts": {
+        "manner": 2,
+        "content": 2
+      },
+      "neighbor_sememes": [
+        "GoOn|继续",
+        "SelfMoveInManner|方式性自移",
+        "die|死",
+        "pretend|假装"
+      ],
+      "example_sense_ids": [
+        "000000025426",
+        "000000025427",
+        "000000025428",
+        "000000025429",
+        "000000026456"
+      ],
+      "role_edges": [
+        {
+          "role": "manner",
+          "from_sememe": "die|死",
+          "to_sememe": "calm|镇静"
+        },
+        {
+          "role": "content",
+          "from_sememe": "GoOn|继续",
+          "to_sememe": "calm|镇静"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "SelfMoveInManner|方式性自移",
+          "to_sememe": "calm|镇静"
+        },
+        {
+          "role": "content",
+          "from_sememe": "pretend|假装",
+          "to_sememe": "calm|镇静"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "ardent|热情",
+      "label_en": "ardent",
+      "label_zh": "热情",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 113,
+      "frequency": 114,
+      "role_edge_counts": {
+        "modifier": 1,
+        "descriptive": 1,
+        "CoEvent": 1,
+        "manner": 1,
+        "means": 1
+      },
+      "neighbor_sememes": [
+        "AnimalHuman|动物",
+        "ShowLove|示爱",
+        "become|成为",
+        "emotion|情感",
+        "fact|事情",
+        "mouth|口",
+        "part|部件",
+        "touch|触"
+      ],
+      "example_sense_ids": [
+        "000000048595",
+        "000000048596",
+        "000000051666",
+        "000000057621",
+        "000000061358"
+      ],
+      "role_edges": [
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "ardent|热情"
+        },
+        {
+          "role": "descriptive",
+          "from_sememe": "become|成为",
+          "to_sememe": "ardent|热情"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "ShowLove|示爱"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "ardent|热情"
+        },
+        {
+          "role": "means",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "touch|触"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "passionate|有情",
+      "label_en": "passionate",
+      "label_zh": "有情",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 57,
+      "frequency": 58,
+      "role_edge_counts": {
+        "CoEvent": 1
+      },
+      "neighbor_sememes": [
+        "faithful|忠",
+        "frail|单弱",
+        "thinking|思想"
+      ],
+      "example_sense_ids": [
+        "000000038392",
+        "000000038393",
+        "000000041666",
+        "000000041667",
+        "000000041668"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "thinking|思想",
+          "to_sememe": "passionate|有情"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "optimistic|乐观",
+      "label_en": "optimistic",
+      "label_zh": "乐观",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 27,
+      "frequency": 28,
+      "role_edge_counts": {
+        "modifier": 3,
+        "host": 2,
+        "scope": 1
+      },
+      "neighbor_sememes": [
+        "Living|生活状况",
+        "alive|活着",
+        "animate|生物",
+        "emotion|情感",
+        "group|群体",
+        "human|人"
+      ],
+      "example_sense_ids": [
+        "000000033785",
+        "000000033786",
+        "000000033787",
+        "000000033898",
+        "000000033899"
+      ],
+      "role_edges": [
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "optimistic|乐观"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "optimistic|乐观"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "animate|生物"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "group|群体"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "optimistic|乐观"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "alive|活着"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "pessimistic|悲观",
+      "label_en": "pessimistic",
+      "label_zh": "悲观",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 6,
+      "frequency": 7,
+      "role_edge_counts": {
+        "modifier": 2
+      },
+      "neighbor_sememes": [
+        "emotion|情感",
+        "human|人"
+      ],
+      "example_sense_ids": [
+        "000000130880",
+        "000000130881",
+        "000000130882",
+        "000000130883",
+        "000000197535"
+      ],
+      "role_edges": [
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "pessimistic|悲观"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "pessimistic|悲观"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "FondOf|喜欢",
+      "label_en": "FondOf",
+      "label_zh": "喜欢",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 412,
+      "frequency": 413,
+      "role_edge_counts": {
+        "adjunct": 3,
+        "scope": 5,
+        "content": 3,
+        "target": 5,
+        "experiencer": 2,
+        "frequency": 1,
+        "ResultEvent": 1,
+        "existent": 1,
+        "CoEvent": 1,
+        "manner": 1,
+        "modifier": 5,
+        "restrictive": 1,
+        "RelateTo": 1
+      },
+      "neighbor_sememes": [
+        "3rdPerson|他",
+        "Environment|情况",
+        "PropertyValue|特性值",
+        "able|能",
+        "all|全",
+        "always|总是",
+        "child|少儿",
+        "community|团体",
+        "debate|辩论",
+        "difficult|难",
+        "emotion|情感",
+        "enjoy|享受",
+        "exercise|锻炼",
+        "exist|存在",
+        "fact|事情",
+        "female|女",
+        "fight|争斗",
+        "fit|适合",
+        "free|自由",
+        "human|人",
+        "impossible|不会",
+        "knowledge|知识",
+        "know|知道",
+        "mass|众",
+        "neg|否",
+        "praise|夸奖",
+        "specific|特定",
+        "sport|体育",
+        "urge|促使"
+      ],
+      "example_sense_ids": [
+        "000000018157",
+        "000000025666",
+        "000000025667",
+        "000000025937",
+        "000000026434"
+      ],
+      "role_edges": [
+        {
+          "role": "adjunct",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "impossible|不会",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "content",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "$"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "know|知道",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "content",
+          "from_sememe": "know|知道",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "target",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "target",
+          "from_sememe": "fact|事情",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "frequency",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "always|总是"
+        },
+        {
+          "role": "target",
+          "from_sememe": "human|人",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "urge|促使"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "urge|促使",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "exist|存在",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "existent",
+          "from_sememe": "exist|存在",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "exist|存在",
+          "to_sememe": "all|全"
+        },
+        {
+          "role": "target",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "fight|争斗"
+        },
+        {
+          "role": "target",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "debate|辩论"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "PropertyValue|特性值",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "child|少儿"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "female|女"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "difficult|难",
+          "to_sememe": "fit|适合"
+        },
+        {
+          "role": "restrictive",
+          "from_sememe": "fit|适合",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "fit|适合",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "community|团体",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "specific|特定"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "community|团体",
+          "to_sememe": "knowledge|知识"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "knowledge|知识",
+          "to_sememe": "specific|特定"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "love|爱",
+      "label_en": "love",
+      "label_zh": "爱",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 114,
+      "frequency": 101,
+      "role_edge_counts": {
+        "CoEvent": 1,
+        "duration": 2,
+        "TimeSect": 1,
+        "quantity": 1,
+        "time": 1,
+        "sequence": 1,
+        "manner": 4,
+        "purpose": 1,
+        "content": 3,
+        "target": 3,
+        "partner": 1,
+        "modifier": 3,
+        "experiencer": 2,
+        "domain": 1,
+        "location": 1,
+        "agent": 2,
+        "RelateTo": 1,
+        "patient": 1
+      },
+      "neighbor_sememes": [
+        "EachOther|相互",
+        "InstitutePlace|场所",
+        "LowVoice|低声",
+        "MakeBetter|优化",
+        "Sex|性别",
+        "TimeShort|短时间",
+        "WhileAway|消闲",
+        "alike|似",
+        "alone|独自",
+        "associate|交往",
+        "commerce|商业",
+        "different|异",
+        "disappear|消失",
+        "emotion|情感",
+        "engage|从事",
+        "express|表示",
+        "fact|事情",
+        "female|女",
+        "first|首次",
+        "friend|友",
+        "human|人",
+        "immoral|不道德",
+        "look|看",
+        "music|音乐",
+        "night|夜",
+        "recent|新近",
+        "show|表现",
+        "single|单",
+        "speak|说",
+        "time|时间"
+      ],
+      "example_sense_ids": [
+        "000000017661",
+        "000000018456",
+        "000000018459",
+        "000000018460",
+        "000000036178"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "love|爱"
+        },
+        {
+          "role": "duration",
+          "from_sememe": "fact|事情",
+          "to_sememe": "time|时间"
+        },
+        {
+          "role": "TimeSect",
+          "from_sememe": "time|时间",
+          "to_sememe": "night|夜"
+        },
+        {
+          "role": "quantity",
+          "from_sememe": "time|时间",
+          "to_sememe": "single|单"
+        },
+        {
+          "role": "time",
+          "from_sememe": "love|爱",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "sequence",
+          "from_sememe": "look|看",
+          "to_sememe": "first|首次"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "love|爱",
+          "to_sememe": "EachOther|相互"
+        },
+        {
+          "role": "purpose",
+          "from_sememe": "look|看",
+          "to_sememe": "show|表现"
+        },
+        {
+          "role": "content",
+          "from_sememe": "show|表现",
+          "to_sememe": "love|爱"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "love|爱",
+          "to_sememe": "alone|独自"
+        },
+        {
+          "role": "target",
+          "from_sememe": "love|爱",
+          "to_sememe": "?"
+        },
+        {
+          "role": "content",
+          "from_sememe": "speak|说",
+          "to_sememe": "love|爱"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "speak|说",
+          "to_sememe": "LowVoice|低声"
+        },
+        {
+          "role": "partner",
+          "from_sememe": "associate|交往",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "friend|友"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "recent|新近"
+        },
+        {
+          "role": "target",
+          "from_sememe": "human|人",
+          "to_sememe": "love|爱"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "love|爱",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "love|爱"
+        },
+        {
+          "role": "target",
+          "from_sememe": "love|爱",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "commerce|商业"
+        },
+        {
+          "role": "location",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "WhileAway|消闲"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "WhileAway|消闲",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "fact|事情",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "content",
+          "from_sememe": "engage|从事",
+          "to_sememe": "love|爱"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "love|爱",
+          "to_sememe": "immoral|不道德"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "female|女"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "MakeBetter|优化",
+          "to_sememe": "disappear|消失"
+        },
+        {
+          "role": "duration",
+          "from_sememe": "disappear|消失",
+          "to_sememe": "TimeShort|短时间"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "MakeBetter|优化",
+          "to_sememe": "emotion|情感"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "BeInLove|恋爱",
+      "label_en": "BeInLove",
+      "label_zh": "恋爱",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 231,
+      "frequency": 232,
+      "role_edge_counts": {
+        "TimeFeature": 1,
+        "TimeSect": 1,
+        "time": 2,
+        "agent": 4,
+        "host": 2,
+        "modifier": 8,
+        "scope": 2,
+        "CoEvent": 2,
+        "manner": 1,
+        "partner": 2,
+        "ResultEvent": 1,
+        "degree": 1,
+        "coagent": 1,
+        "content": 2
+      },
+      "neighbor_sememes": [
+        "Circumstances|境况",
+        "GetMarried|结婚",
+        "InstitutePlace|场所",
+        "Intimacy|亲疏",
+        "aged|老年",
+        "complicated|繁",
+        "congratulate|祝贺",
+        "day|日",
+        "distant|疏远",
+        "emotion|情感",
+        "engage|从事",
+        "fact|事情",
+        "female|女",
+        "festival|节",
+        "first|首次",
+        "guide|引导",
+        "human|人",
+        "immoral|不道德",
+        "male|男",
+        "past|过去",
+        "reject|回绝",
+        "specific|特定",
+        "suffer|遭受",
+        "time|时间",
+        "together|共同",
+        "undergo|经受"
+      ],
+      "example_sense_ids": [
+        "000000018783",
+        "000000018784",
+        "000000018786",
+        "000000018787",
+        "000000018788"
+      ],
+      "role_edges": [
+        {
+          "role": "TimeFeature",
+          "from_sememe": "time|时间",
+          "to_sememe": "festival|节"
+        },
+        {
+          "role": "TimeSect",
+          "from_sememe": "time|时间",
+          "to_sememe": "day|日"
+        },
+        {
+          "role": "time",
+          "from_sememe": "time|时间",
+          "to_sememe": "congratulate|祝贺"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "congratulate|祝贺",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "complicated|繁"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Intimacy|亲疏",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "Intimacy|亲疏",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "BeInLove|恋爱",
+          "to_sememe": "immoral|不道德"
+        },
+        {
+          "role": "partner",
+          "from_sememe": "BeInLove|恋爱",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "female|女"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "guide|引导"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "guide|引导",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "past|过去"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "past|过去",
+          "to_sememe": "specific|特定"
+        },
+        {
+          "role": "partner",
+          "from_sememe": "human|人",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "fact|事情",
+          "to_sememe": "first|首次"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "past|过去"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "male|男"
+        },
+        {
+          "role": "coagent",
+          "from_sememe": "BeInLove|恋爱",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "Intimacy|亲疏"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "BeInLove|恋爱",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "distant|疏远"
+        },
+        {
+          "role": "content",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "reject|回绝"
+        },
+        {
+          "role": "time",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "BeInLove|恋爱"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "guide|引导"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "fact|事情",
+          "to_sememe": "immoral|不道德"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "like|爱惜",
+      "label_en": "like",
+      "label_zh": "爱惜",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 212,
+      "frequency": 213,
+      "role_edge_counts": {
+        "adjunct": 1,
+        "target": 5,
+        "PlaceSect": 1,
+        "domain": 3,
+        "location": 1,
+        "content": 2,
+        "CoEvent": 2,
+        "manner": 3,
+        "agent": 1,
+        "modifier": 2,
+        "experiencer": 1,
+        "concession": 1,
+        "scope": 1,
+        "degree": 1,
+        "possession": 1
+      },
+      "neighbor_sememes": [
+        "China|中国",
+        "ComeToWorld|问世",
+        "EachOther|相互",
+        "GiveAsGift|赠",
+        "ProperName|专",
+        "animal|兽",
+        "biased|不公正",
+        "country|国家",
+        "emotion|情感",
+        "entertainment|艺",
+        "entity|实体",
+        "human|人",
+        "indulge|放纵",
+        "negligible|渺",
+        "neg|否",
+        "own|有",
+        "physical|物质",
+        "place|地方",
+        "politics|政",
+        "seek|谋取",
+        "self|己",
+        "specific|特定",
+        "sport|体育",
+        "thing|万物",
+        "thinking|思想",
+        "undergo|经受",
+        "very|很"
+      ],
+      "example_sense_ids": [
+        "000000017828",
+        "000000026835",
+        "000000035160",
+        "000000036183",
+        "000000037557"
+      ],
+      "role_edges": [
+        {
+          "role": "adjunct",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "target",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "place|地方"
+        },
+        {
+          "role": "PlaceSect",
+          "from_sememe": "place|地方",
+          "to_sememe": "country|国家"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "place|地方",
+          "to_sememe": "politics|政"
+        },
+        {
+          "role": "location",
+          "from_sememe": "place|地方",
+          "to_sememe": "ComeToWorld|问世"
+        },
+        {
+          "role": "content",
+          "from_sememe": "seek|谋取",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "EachOther|相互"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "thing|万物",
+          "to_sememe": "specific|特定"
+        },
+        {
+          "role": "target",
+          "from_sememe": "thing|万物",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "biased|不公正"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "thinking|思想",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "target",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "animal|兽"
+        },
+        {
+          "role": "concession",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "negligible|渺"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "negligible|渺",
+          "to_sememe": "physical|物质"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "very|很"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "possession",
+          "from_sememe": "own|有",
+          "to_sememe": "entity|实体"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "entity|实体",
+          "to_sememe": "self|己"
+        },
+        {
+          "role": "target",
+          "from_sememe": "entity|实体",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "human|人",
+          "to_sememe": "entertainment|艺"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "human|人",
+          "to_sememe": "sport|体育"
+        },
+        {
+          "role": "target",
+          "from_sememe": "human|人",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "like|爱惜",
+          "to_sememe": "indulge|放纵"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "hate|仇恨",
+      "label_en": "hate",
+      "label_zh": "仇恨",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 114,
+      "frequency": 115,
+      "role_edge_counts": {
+        "CoEvent": 2,
+        "modifier": 5,
+        "means": 1,
+        "target": 2,
+        "manner": 2,
+        "adjunct": 1,
+        "agent": 1,
+        "content": 1,
+        "experiencer": 1,
+        "degree": 1
+      },
+      "neighbor_sememes": [
+        "TimeLong|长时间",
+        "bite|啃咬",
+        "cherish|心怀",
+        "emotion|情感",
+        "extreme|极",
+        "fact|事情",
+        "human|人",
+        "neg|否",
+        "noble|高尚",
+        "past|过去",
+        "righteous|正义",
+        "strong|强",
+        "thing|万物",
+        "together|共同",
+        "treat|对待"
+      ],
+      "example_sense_ids": [
+        "000000025329",
+        "000000028048",
+        "000000038634",
+        "000000038635",
+        "000000038636"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "strong|强"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "means",
+          "from_sememe": "treat|对待",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "righteous|正义"
+        },
+        {
+          "role": "target",
+          "from_sememe": "treat|对待",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "past|过去"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "hate|仇恨",
+          "to_sememe": "together|共同"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "cherish|心怀",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "cherish|心怀",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "noble|高尚"
+        },
+        {
+          "role": "content",
+          "from_sememe": "cherish|心怀",
+          "to_sememe": "emotion|情感"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "TimeLong|长时间"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "target",
+          "from_sememe": "thing|万物",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "hate|仇恨",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "hate|仇恨",
+          "to_sememe": "bite|啃咬"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "disgust|厌恶",
+      "label_en": "disgust",
+      "label_zh": "厌恶",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 264,
+      "frequency": 265,
+      "role_edge_counts": {
+        "adjunct": 1,
+        "scope": 1,
+        "ResultEvent": 1,
+        "experiencer": 1,
+        "content": 1
+      },
+      "neighbor_sememes": [
+        "able|能",
+        "human|人",
+        "neg|否",
+        "tour|旅游",
+        "urge|促使"
+      ],
+      "example_sense_ids": [
+        "000000025459",
+        "000000025460",
+        "000000025461",
+        "000000025957",
+        "000000025958"
+      ],
+      "role_edges": [
+        {
+          "role": "adjunct",
+          "from_sememe": "disgust|厌恶",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "urge|促使"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "urge|促使",
+          "to_sememe": "disgust|厌恶"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "disgust|厌恶"
+        },
+        {
+          "role": "content",
+          "from_sememe": "disgust|厌恶",
+          "to_sememe": "tour|旅游"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "jealous|妒忌",
+      "label_en": "jealous",
+      "label_zh": "妒忌",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 62,
+      "frequency": 63,
+      "role_edge_counts": {
+        "CoEvent": 1,
+        "target": 1,
+        "modifier": 1,
+        "experiencer": 1
+      },
+      "neighbor_sememes": [
+        "able|能",
+        "emotion|情感",
+        "human|人"
+      ],
+      "example_sense_ids": [
+        "000000035251",
+        "000000075871",
+        "000000098734",
+        "000000098735",
+        "000000098736"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "jealous|妒忌"
+        },
+        {
+          "role": "target",
+          "from_sememe": "jealous|妒忌",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "able|能"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "jealous|妒忌"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "grateful|感激",
+      "label_en": "grateful",
+      "label_zh": "感激",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 71,
+      "frequency": 72,
+      "role_edge_counts": {
+        "degree": 1,
+        "adjunct": 1,
+        "CoEvent": 2,
+        "cause": 2,
+        "result": 1,
+        "content": 1
+      },
+      "neighbor_sememes": [
+        "emotion|情感",
+        "enjoy|享受",
+        "hate|仇恨",
+        "help|帮助",
+        "neg|否",
+        "recompense|补偿",
+        "very|很",
+        "willing|愿意"
+      ],
+      "example_sense_ids": [
+        "000000017944",
+        "000000026961",
+        "000000027649",
+        "000000038052",
+        "000000127660"
+      ],
+      "role_edges": [
+        {
+          "role": "degree",
+          "from_sememe": "grateful|感激",
+          "to_sememe": "very|很"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "grateful|感激",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "grateful|感激"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "hate|仇恨"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "grateful|感激",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "result",
+          "from_sememe": "grateful|感激",
+          "to_sememe": "willing|愿意"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "recompense|补偿"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "grateful|感激",
+          "to_sememe": "?"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "regret|抱歉",
+      "label_en": "regret",
+      "label_zh": "抱歉",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 36,
+      "frequency": 37,
+      "role_edge_counts": {
+        "CoEvent": 1,
+        "degree": 1,
+        "adjunct": 1
+      },
+      "neighbor_sememes": [
+        "emotion|情感",
+        "neg|否",
+        "very|很"
+      ],
+      "example_sense_ids": [
+        "000000027277",
+        "000000027516",
+        "000000027517",
+        "000000035709",
+        "000000052470"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "regret|抱歉"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "regret|抱歉",
+          "to_sememe": "very|很"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "regret|抱歉",
+          "to_sememe": "neg|否"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "worried|着急",
+      "label_en": "worried",
+      "label_zh": "着急",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 145,
+      "frequency": 146,
+      "role_edge_counts": {
+        "condition": 1,
+        "adjunct": 2,
+        "content": 2,
+        "manner": 4,
+        "degree": 1,
+        "cause": 3,
+        "LocationFin": 1,
+        "CoEvent": 4
+      },
+      "neighbor_sememes": [
+        "Advantageousness|利弊",
+        "BeUnable|无能",
+        "GoBack|返回",
+        "PayAttention|注意",
+        "emotion|情感",
+        "expect|期望",
+        "experience|感受",
+        "fact|事情",
+        "family|家庭",
+        "future|将来",
+        "joyful|喜悦",
+        "neg|否",
+        "predict|预料",
+        "present|现在",
+        "thinking|思想",
+        "time|时间",
+        "very|很",
+        "willing|愿意"
+      ],
+      "example_sense_ids": [
+        "000000038098",
+        "000000072281",
+        "000000077887",
+        "000000077888",
+        "000000082453"
+      ],
+      "role_edges": [
+        {
+          "role": "condition",
+          "from_sememe": "worried|着急",
+          "to_sememe": "predict|预料"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "predict|预料",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "content",
+          "from_sememe": "predict|预料",
+          "to_sememe": "time|时间"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "worried|着急",
+          "to_sememe": "present|现在"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "worried|着急",
+          "to_sememe": "very|很"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "worried|着急"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "worried|着急",
+          "to_sememe": "BeUnable|无能"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "worried|着急",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "content",
+          "from_sememe": "expect|期望",
+          "to_sememe": "GoBack|返回"
+        },
+        {
+          "role": "LocationFin",
+          "from_sememe": "GoBack|返回",
+          "to_sememe": "family|家庭"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "expect|期望",
+          "to_sememe": "worried|着急"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "worried|着急"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "emotion|情感",
+          "to_sememe": "worried|着急"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "thinking|思想",
+          "to_sememe": "worried|着急"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "worried|着急",
+          "to_sememe": "Advantageousness|利弊"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "worried|着急",
+          "to_sememe": "?"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "experience|感受",
+          "to_sememe": "PayAttention|注意"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "PayAttention|注意",
+          "to_sememe": "worried|着急"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "surprise|惊奇",
+      "label_en": "surprise",
+      "label_zh": "惊奇",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 126,
+      "frequency": 127,
+      "role_edge_counts": {
+        "content": 3,
+        "time": 3,
+        "scope": 1,
+        "ResultEvent": 1,
+        "modifier": 2,
+        "degree": 1,
+        "CoEvent": 1
+      },
+      "neighbor_sememes": [
+        "MakeSound|发声",
+        "able|能",
+        "expression|词语",
+        "express|表示",
+        "fact|事情",
+        "few|少",
+        "information|信息",
+        "phenomena|现象",
+        "sound|声",
+        "undergo|经受",
+        "urge|促使",
+        "very|很"
+      ],
+      "example_sense_ids": [
+        "000000035070",
+        "000000035071",
+        "000000039591",
+        "000000039666",
+        "000000039706"
+      ],
+      "role_edges": [
+        {
+          "role": "content",
+          "from_sememe": "expression|词语",
+          "to_sememe": "express|表示"
+        },
+        {
+          "role": "time",
+          "from_sememe": "express|表示",
+          "to_sememe": "surprise|惊奇"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "urge|促使"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "urge|促使",
+          "to_sememe": "surprise|惊奇"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "information|信息",
+          "to_sememe": "able|能"
+        },
+        {
+          "role": "content",
+          "from_sememe": "sound|声",
+          "to_sememe": "MakeSound|发声"
+        },
+        {
+          "role": "time",
+          "from_sememe": "MakeSound|发声",
+          "to_sememe": "surprise|惊奇"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "surprise|惊奇",
+          "to_sememe": "very|很"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "surprise|惊奇"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "phenomena|现象",
+          "to_sememe": "able|能"
+        },
+        {
+          "role": "time",
+          "from_sememe": "surprise|惊奇",
+          "to_sememe": "undergo|经受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "undergo|经受",
+          "to_sememe": "few|少"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "excite|感动",
+      "label_en": "excite",
+      "label_zh": "感动",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 172,
+      "frequency": 173,
+      "role_edge_counts": {
+        "scope": 1,
+        "agent": 1,
+        "duration": 1,
+        "degree": 1
+      },
+      "neighbor_sememes": [
+        "TimeShort|短时间",
+        "able|能",
+        "thing|万物",
+        "very|很"
+      ],
+      "example_sense_ids": [
+        "000000039216",
+        "000000039217",
+        "000000039541",
+        "000000039585",
+        "000000039586"
+      ],
+      "role_edges": [
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "excite|感动"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "thing|万物",
+          "to_sememe": "excite|感动"
+        },
+        {
+          "role": "duration",
+          "from_sememe": "excite|感动",
+          "to_sememe": "TimeShort|短时间"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "excite|感动",
+          "to_sememe": "very|很"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "enjoy|享受",
+      "label_en": "enjoy",
+      "label_zh": "享受",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 276,
+      "frequency": 277,
+      "role_edge_counts": {
+        "manner": 3,
+        "content": 10,
+        "scope": 3,
+        "time": 1,
+        "adjunct": 1,
+        "target": 1,
+        "host": 1,
+        "modifier": 4,
+        "CoEvent": 1,
+        "experiencer": 1,
+        "degree": 1,
+        "duration": 2,
+        "domain": 1
+      },
+      "neighbor_sememes": [
+        "FondOf|喜欢",
+        "GoodLooking|好看",
+        "GoodTaste|好吃",
+        "Living|生活状况",
+        "Priority|主次",
+        "PropertyValue|特性值",
+        "WellTreat|善待",
+        "WhileAway|消闲",
+        "benefit|便利",
+        "child|少儿",
+        "chilly|凉",
+        "commerce|商业",
+        "cosy|惬",
+        "easy|易",
+        "eat|吃",
+        "edible|食物",
+        "endorse|拥护",
+        "euphonious|好听",
+        "expect|期望",
+        "expression|词语",
+        "express|表示",
+        "extensive|泛",
+        "extreme|极",
+        "female|女",
+        "fortunate|好运",
+        "happy|幸福",
+        "human|人",
+        "ill|病态",
+        "know|知道",
+        "listen|听"
+      ],
+      "example_sense_ids": [
+        "000000017593",
+        "000000018652",
+        "000000018653",
+        "000000018654",
+        "000000018655"
+      ],
+      "role_edges": [
+        {
+          "role": "manner",
+          "from_sememe": "speak|说",
+          "to_sememe": "PropertyValue|特性值"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "PropertyValue|特性值",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "fortunate|好运"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "fortunate|好运",
+          "to_sememe": "eat|吃"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "fortunate|好运",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "fortunate|好运",
+          "to_sememe": "listen|听"
+        },
+        {
+          "role": "content",
+          "from_sememe": "expression|词语",
+          "to_sememe": "express|表示"
+        },
+        {
+          "role": "time",
+          "from_sememe": "express|表示",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "know|知道",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "content",
+          "from_sememe": "know|知道",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "target",
+          "from_sememe": "FondOf|喜欢",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "chilly|凉"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "Living|生活状况"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "cosy|惬"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "thinking|思想",
+          "to_sememe": "expect|期望"
+        },
+        {
+          "role": "content",
+          "from_sememe": "expect|期望",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Living|生活状况",
+          "to_sememe": "happy|幸福"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "child|少儿"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "female|女"
+        },
+        {
+          "role": "experiencer",
+          "from_sememe": "human|人",
+          "to_sememe": "enjoy|享受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "FondOf|喜欢"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "time|时间"
+        },
+        {
+          "role": "duration",
+          "from_sememe": "time|时间",
+          "to_sememe": "WhileAway|消闲"
+        },
+        {
+          "role": "duration",
+          "from_sememe": "time|时间",
+          "to_sememe": "rest|休息"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "time|时间",
+          "to_sememe": "medical|医"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "endorse|拥护"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "endorse|拥护",
+          "to_sememe": "extensive|泛"
+        },
+        {
+          "role": "content",
+          "from_sememe": "enjoy|享受",
+          "to_sememe": "Priority|主次"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "SeekPleasure|寻欢",
+      "label_en": "SeekPleasure",
+      "label_zh": "寻欢",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 175,
+      "frequency": 176,
+      "role_edge_counts": {
+        "CoEvent": 2,
+        "manner": 1,
+        "RelateTo": 3,
+        "means": 1,
+        "HostOf": 1,
+        "modifier": 4,
+        "agent": 1,
+        "partner": 1,
+        "domain": 1,
+        "location": 1,
+        "content": 1,
+        "isa": 1
+      },
+      "neighbor_sememes": [
+        "InstitutePlace|场所",
+        "Occupation|职位",
+        "TakeCare|照料",
+        "affairs|事务",
+        "become|成为",
+        "commerce|商业",
+        "engage|从事",
+        "fact|事情",
+        "female|女",
+        "human|人",
+        "lascivious|淫",
+        "lawful|合法",
+        "mating|交配"
+      ],
+      "example_sense_ids": [
+        "000000019705",
+        "000000019706",
+        "000000019707",
+        "000000043232",
+        "000000043233"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "TakeCare|照料"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "TakeCare|照料",
+          "to_sememe": "lascivious|淫"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "fact|事情",
+          "to_sememe": "SeekPleasure|寻欢"
+        },
+        {
+          "role": "means",
+          "from_sememe": "SeekPleasure|寻欢",
+          "to_sememe": "mating|交配"
+        },
+        {
+          "role": "HostOf",
+          "from_sememe": "human|人",
+          "to_sememe": "Occupation|职位"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "human|人",
+          "to_sememe": "SeekPleasure|寻欢"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "female|女"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "TakeCare|照料"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "lascivious|淫"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "lawful|合法"
+        },
+        {
+          "role": "partner",
+          "from_sememe": "human|人",
+          "to_sememe": "SeekPleasure|寻欢"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "commerce|商业"
+        },
+        {
+          "role": "location",
+          "from_sememe": "InstitutePlace|场所",
+          "to_sememe": "SeekPleasure|寻欢"
+        },
+        {
+          "role": "content",
+          "from_sememe": "engage|从事",
+          "to_sememe": "affairs|事务"
+        },
+        {
+          "role": "RelateTo",
+          "from_sememe": "affairs|事务",
+          "to_sememe": "SeekPleasure|寻欢"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "affairs|事务",
+          "to_sememe": "lascivious|淫"
+        },
+        {
+          "role": "isa",
+          "from_sememe": "become|成为",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "SeekPleasure|寻欢"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "ShowJoy|示喜",
+      "label_en": "ShowJoy",
+      "label_zh": "示喜",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 7,
+      "frequency": 8,
+      "role_edge_counts": {
+        "content": 1,
+        "time": 1
+      },
+      "neighbor_sememes": [
+        "expression|词语",
+        "express|表示"
+      ],
+      "example_sense_ids": [
+        "000000083424",
+        "000000140709",
+        "000000217284",
+        "000000220189",
+        "000000237595"
+      ],
+      "role_edges": [
+        {
+          "role": "content",
+          "from_sememe": "expression|词语",
+          "to_sememe": "express|表示"
+        },
+        {
+          "role": "time",
+          "from_sememe": "express|表示",
+          "to_sememe": "ShowJoy|示喜"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "ShowLove|示爱",
+      "label_en": "ShowLove",
+      "label_zh": "示爱",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 81,
+      "frequency": 82,
+      "role_edge_counts": {
+        "means": 2,
+        "cause": 2,
+        "instrument": 1,
+        "manner": 3,
+        "TimeBefore": 1,
+        "CoEvent": 1,
+        "time": 1,
+        "patient": 1,
+        "agent": 1,
+        "purpose": 1
+      },
+      "neighbor_sememes": [
+        "AnimalHuman|动物",
+        "BeInLove|恋爱",
+        "CausePartMove|部件他移",
+        "SetAside|留存",
+        "covert|隐秘",
+        "fact|事情",
+        "farewell|离别",
+        "human|人",
+        "improper|不当",
+        "lascivious|淫",
+        "mating|交配",
+        "mouth|口",
+        "part|部件",
+        "stroke|抚",
+        "touch|触",
+        "trace|痕"
+      ],
+      "example_sense_ids": [
+        "000000027726",
+        "000000037157",
+        "000000037509",
+        "000000037510",
+        "000000037528"
+      ],
+      "role_edges": [
+        {
+          "role": "means",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "CausePartMove|部件他移"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "stroke|抚",
+          "to_sememe": "ShowLove|示爱"
+        },
+        {
+          "role": "means",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "touch|触"
+        },
+        {
+          "role": "instrument",
+          "from_sememe": "touch|触",
+          "to_sememe": "part|部件"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "improper|不当"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "covert|隐秘"
+        },
+        {
+          "role": "TimeBefore",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "mating|交配"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "ShowLove|示爱"
+        },
+        {
+          "role": "time",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "farewell|离别"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "trace|痕",
+          "to_sememe": "SetAside|留存"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "SetAside|留存",
+          "to_sememe": "ShowLove|示爱"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "stroke|抚",
+          "to_sememe": "lascivious|淫"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "ShowLove|示爱"
+        },
+        {
+          "role": "purpose",
+          "from_sememe": "ShowLove|示爱",
+          "to_sememe": "BeInLove|恋爱"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "ExpressAnger|示怒",
+      "label_en": "ExpressAnger",
+      "label_zh": "示怒",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 56,
+      "frequency": 57,
+      "role_edge_counts": {},
+      "neighbor_sememes": [],
+      "example_sense_ids": [
+        "000000018827",
+        "000000018828",
+        "000000055992",
+        "000000055993",
+        "000000061111"
+      ],
+      "role_edges": [],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "tease|取乐",
+      "label_en": "tease",
+      "label_zh": "取乐",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 97,
+      "frequency": 98,
+      "role_edge_counts": {
+        "instrument": 2,
+        "modifier": 1,
+        "manner": 1,
+        "agent": 1,
+        "CoEvent": 1
+      },
+      "neighbor_sememes": [
+        "fact|事情",
+        "female|女",
+        "human|人",
+        "naming|称作",
+        "text|语文"
+      ],
+      "example_sense_ids": [
+        "000000055945",
+        "000000075695",
+        "000000075862",
+        "000000080801",
+        "000000080802"
+      ],
+      "role_edges": [
+        {
+          "role": "instrument",
+          "from_sememe": "tease|取乐",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "female|女"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "naming|称作",
+          "to_sememe": "tease|取乐"
+        },
+        {
+          "role": "instrument",
+          "from_sememe": "text|语文",
+          "to_sememe": "tease|取乐"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "tease|取乐"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "tease|取乐"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "willing|愿意",
+      "label_en": "willing",
+      "label_zh": "愿意",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 194,
+      "frequency": 195,
+      "role_edge_counts": {
+        "concession": 1,
+        "content": 10,
+        "CoEvent": 1,
+        "belong": 1,
+        "modifier": 1,
+        "manner": 4,
+        "means": 1,
+        "scope": 1,
+        "ResultEvent": 1,
+        "instrument": 1,
+        "degree": 1
+      },
+      "neighbor_sememes": [
+        "EachOther|相互",
+        "able|能",
+        "aspiration|意愿",
+        "cease|停做",
+        "disobey|违背",
+        "engage|从事",
+        "express|表示",
+        "human|人",
+        "inactive|消极",
+        "look|看",
+        "male|男",
+        "mishap|劫难",
+        "perception|感知",
+        "prosper|发达",
+        "resolute|坚决",
+        "result|结果",
+        "sleep|睡",
+        "substantial|充实",
+        "suffer|遭受",
+        "text|语文",
+        "urge|促使",
+        "very|很"
+      ],
+      "example_sense_ids": [
+        "000000019063",
+        "000000019243",
+        "000000024683",
+        "000000024845",
+        "000000026417"
+      ],
+      "role_edges": [
+        {
+          "role": "concession",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "suffer|遭受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "mishap|劫难"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "engage|从事"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "willing|愿意"
+        },
+        {
+          "role": "belong",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "male|男"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "resolute|坚决"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "EachOther|相互"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "perception|感知"
+        },
+        {
+          "role": "means",
+          "from_sememe": "perception|感知",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "look|看"
+        },
+        {
+          "role": "content",
+          "from_sememe": "look|看",
+          "to_sememe": "result|结果"
+        },
+        {
+          "role": "content",
+          "from_sememe": "disobey|违背",
+          "to_sememe": "willing|愿意"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "urge|促使"
+        },
+        {
+          "role": "ResultEvent",
+          "from_sememe": "urge|促使",
+          "to_sememe": "willing|愿意"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "?"
+        },
+        {
+          "role": "instrument",
+          "from_sememe": "text|语文",
+          "to_sememe": "express|表示"
+        },
+        {
+          "role": "content",
+          "from_sememe": "express|表示",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "prosper|发达"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "very|很"
+        },
+        {
+          "role": "content",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "sleep|睡"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "willing|愿意",
+          "to_sememe": "inactive|消极"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "cease|停做",
+          "to_sememe": "willing|愿意"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "unwilling|不愿",
+      "label_en": "unwilling",
+      "label_zh": "不愿",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 39,
+      "frequency": 40,
+      "role_edge_counts": {
+        "scope": 2,
+        "content": 10,
+        "manner": 2,
+        "CoEvent": 2,
+        "but": 1
+      },
+      "neighbor_sememes": [
+        "GetMarried|结婚",
+        "HighRank|高等",
+        "IllTreat|慢待",
+        "LowRank|低等",
+        "Name|姓名",
+        "PropertyValue|特性值",
+        "affairs|事务",
+        "bear|承担",
+        "believe|相信",
+        "fact|事情",
+        "help|帮助",
+        "idle|闲",
+        "inferior|不如",
+        "reveal|揭露",
+        "stubborn|倔强",
+        "suffer|遭受",
+        "unsuitable|不宜"
+      ],
+      "example_sense_ids": [
+        "000000026442",
+        "000000026443",
+        "000000026444",
+        "000000026445",
+        "000000026446"
+      ],
+      "role_edges": [
+        {
+          "role": "scope",
+          "from_sememe": "PropertyValue|特性值",
+          "to_sememe": "unwilling|不愿"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "reveal|揭露"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "inferior|不如"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "suffer|遭受"
+        },
+        {
+          "role": "content",
+          "from_sememe": "suffer|遭受",
+          "to_sememe": "IllTreat|慢待"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "believe|相信"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "stubborn|倔强"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "GetMarried|结婚"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "GetMarried|结婚",
+          "to_sememe": "unwilling|不愿"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "?"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "help|帮助"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "idle|闲"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "unwilling|不愿"
+        },
+        {
+          "role": "but",
+          "from_sememe": "unsuitable|不宜",
+          "to_sememe": "unwilling|不愿"
+        },
+        {
+          "role": "content",
+          "from_sememe": "unwilling|不愿",
+          "to_sememe": "bear|承担"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "unsuitable|不宜",
+          "to_sememe": "bear|承担"
+        },
+        {
+          "role": "content",
+          "from_sememe": "bear|承担",
+          "to_sememe": "affairs|事务"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "voluntary|自愿",
+      "label_en": "voluntary",
+      "label_zh": "自愿",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 57,
+      "frequency": 47,
+      "role_edge_counts": {
+        "agent": 4,
+        "manner": 5,
+        "location": 1,
+        "CoEvent": 2,
+        "content": 2,
+        "cause": 1,
+        "modifier": 2,
+        "domain": 1,
+        "host": 1
+      },
+      "neighbor_sememes": [
+        "Circumstances|境况",
+        "InstitutePlace|场所",
+        "TakeCare|照料",
+        "admit|承认",
+        "affairs|事务",
+        "community|团体",
+        "disease|疾病",
+        "doctor|医治",
+        "engage|从事",
+        "entity|实体",
+        "fact|事情",
+        "guilty|有罪",
+        "help|帮助",
+        "human|人",
+        "institution|机构",
+        "like|爱惜",
+        "medical|医",
+        "police|警"
+      ],
+      "example_sense_ids": [
+        "000000024349",
+        "000000024350",
+        "000000033420",
+        "000000033421",
+        "000000033445"
+      ],
+      "role_edges": [
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "engage|从事"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "engage|从事",
+          "to_sememe": "voluntary|自愿"
+        },
+        {
+          "role": "location",
+          "from_sememe": "engage|从事",
+          "to_sememe": "InstitutePlace|场所"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "affairs|事务",
+          "to_sememe": "TakeCare|照料"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "TakeCare|照料",
+          "to_sememe": "voluntary|自愿"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "affairs|事务",
+          "to_sememe": "help|帮助"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "help|帮助",
+          "to_sememe": "voluntary|自愿"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "community|团体",
+          "to_sememe": "engage|从事"
+        },
+        {
+          "role": "content",
+          "from_sememe": "engage|从事",
+          "to_sememe": "affairs|事务"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "institution|机构",
+          "to_sememe": "TakeCare|照料"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "institution|机构",
+          "to_sememe": "help|帮助"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "engage|从事"
+        },
+        {
+          "role": "cause",
+          "from_sememe": "engage|从事",
+          "to_sememe": "like|爱惜"
+        },
+        {
+          "role": "content",
+          "from_sememe": "admit|承认",
+          "to_sememe": "fact|事情"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "fact|事情",
+          "to_sememe": "guilty|有罪"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "admit|承认",
+          "to_sememe": "police|警"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "admit|承认",
+          "to_sememe": "voluntary|自愿"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "entity|实体"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Circumstances|境况",
+          "to_sememe": "voluntary|自愿"
+        }
+      ],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "aspiration|意愿",
+      "label_en": "aspiration",
+      "label_zh": "意愿",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 457,
+      "frequency": 458,
+      "role_edge_counts": {
+        "CoEvent": 4,
+        "restrictive": 2,
+        "TimeSect": 1,
+        "belong": 1,
+        "modifier": 6,
+        "content": 3,
+        "adjunct": 1,
+        "target": 1,
+        "manner": 1,
+        "concerning": 1,
+        "patient": 3,
+        "AccordingTo": 1,
+        "possessor": 1,
+        "possession": 2,
+        "scope": 1,
+        "quantity": 1
+      },
+      "neighbor_sememes": [
+        "MakeBetter|优化",
+        "OwnNot|无",
+        "PropertyValue|特性值",
+        "act|行动",
+        "alone|独自",
+        "animal|兽",
+        "cherish|心怀",
+        "damage|损害",
+        "die|死",
+        "disappoint|辜负",
+        "eat|吃",
+        "expect|期望",
+        "fulfil|实现",
+        "great|伟",
+        "human|人",
+        "lifespan|终生",
+        "look|看",
+        "male|男",
+        "mass|众",
+        "mating|交配",
+        "need|需求",
+        "neg|否",
+        "obey|遵循",
+        "own|有",
+        "prepare|准备",
+        "public|共",
+        "self|己",
+        "text|语文",
+        "time|时间",
+        "together|共同"
+      ],
+      "example_sense_ids": [
+        "000000017565",
+        "000000018195",
+        "000000018225",
+        "000000019243",
+        "000000024375"
+      ],
+      "role_edges": [
+        {
+          "role": "CoEvent",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "expect|期望"
+        },
+        {
+          "role": "restrictive",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "time|时间"
+        },
+        {
+          "role": "TimeSect",
+          "from_sememe": "time|时间",
+          "to_sememe": "lifespan|终生"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "willing|愿意"
+        },
+        {
+          "role": "belong",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "male|男"
+        },
+        {
+          "role": "content",
+          "from_sememe": "expect|期望",
+          "to_sememe": "MakeBetter|优化"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "disappoint|辜负",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "target",
+          "from_sememe": "disappoint|辜负",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "public|共"
+        },
+        {
+          "role": "content",
+          "from_sememe": "cherish|心怀",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "wicked|歹"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "look|看",
+          "to_sememe": "cherish|心怀"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "need|需求"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "alone|独自"
+        },
+        {
+          "role": "concerning",
+          "from_sememe": "text|语文",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "fulfil|实现"
+        },
+        {
+          "role": "AccordingTo",
+          "from_sememe": "act|行动",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "self|己"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "fulfil|实现",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "possessor",
+          "from_sememe": "human|人",
+          "to_sememe": "own|有"
+        },
+        {
+          "role": "possession",
+          "from_sememe": "own|有",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "obey|遵循"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "obey|遵循",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "content",
+          "from_sememe": "prepare|准备",
+          "to_sememe": "fulfil|实现"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "PropertyValue|特性值",
+          "to_sememe": "OwnNot|无"
+        },
+        {
+          "role": "possession",
+          "from_sememe": "OwnNot|无",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "restrictive",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "quantity",
+          "from_sememe": "human|人",
+          "to_sememe": "mass|众"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "eager|急切",
+      "label_en": "eager",
+      "label_zh": "急切",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 61,
+      "frequency": 62,
+      "role_edge_counts": {
+        "content": 2,
+        "manner": 2,
+        "degree": 1,
+        "scope": 1,
+        "possession": 1,
+        "modifier": 1
+      },
+      "neighbor_sememes": [
+        "able|能",
+        "do|做",
+        "excrete|排泄",
+        "expect|期望",
+        "extreme|极",
+        "human|人",
+        "seek|谋取",
+        "succeed|成功"
+      ],
+      "example_sense_ids": [
+        "000000052414",
+        "000000072274",
+        "000000126874",
+        "000000126875",
+        "000000126876"
+      ],
+      "role_edges": [
+        {
+          "role": "content",
+          "from_sememe": "expect|期望",
+          "to_sememe": "excrete|排泄"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "expect|期望",
+          "to_sememe": "eager|急切"
+        },
+        {
+          "role": "degree",
+          "from_sememe": "eager|急切",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "content",
+          "from_sememe": "expect|期望",
+          "to_sememe": "succeed|成功"
+        },
+        {
+          "role": "scope",
+          "from_sememe": "eager|急切",
+          "to_sememe": "do|做"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "seek|谋取",
+          "to_sememe": "eager|急切"
+        },
+        {
+          "role": "possession",
+          "from_sememe": "seek|谋取",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "human|人",
+          "to_sememe": "able|能"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "urgent|急",
+      "label_en": "urgent",
+      "label_zh": "急",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 191,
+      "frequency": 192,
+      "role_edge_counts": {
+        "degree": 1,
+        "modifier": 4,
+        "adjunct": 1,
+        "CoEvent": 3,
+        "direction": 1,
+        "domain": 3,
+        "manner": 3,
+        "content": 1,
+        "patient": 2,
+        "means": 1,
+        "purpose": 1
+      },
+      "neighbor_sememes": [
+        "LowRank|低等",
+        "affairs|事务",
+        "aspiration|意愿",
+        "disease|疾病",
+        "extreme|极",
+        "facing|朝向",
+        "fact|事情",
+        "fulfil|实现",
+        "handle|处理",
+        "inflamed|发炎",
+        "letter|信件",
+        "medical|医",
+        "method|方法",
+        "need|需求",
+        "neg|否",
+        "police|警",
+        "prepare|准备",
+        "request|要求",
+        "rescue|救助",
+        "resume|恢复"
+      ],
+      "example_sense_ids": [
+        "000000018469",
+        "000000018470",
+        "000000018929",
+        "000000026400",
+        "000000026579"
+      ],
+      "role_edges": [
+        {
+          "role": "degree",
+          "from_sememe": "urgent|急",
+          "to_sememe": "extreme|极"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "affairs|事务",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "adjunct",
+          "from_sememe": "urgent|急",
+          "to_sememe": "neg|否"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "need|需求"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "aspiration|意愿",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "direction",
+          "from_sememe": "facing|朝向",
+          "to_sememe": "affairs|事务"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "urgent|急",
+          "to_sememe": "medical|医"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "urgent|急",
+          "to_sememe": "LowRank|低等"
+        },
+        {
+          "role": "content",
+          "from_sememe": "prepare|准备",
+          "to_sememe": "fulfil|实现"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "fulfil|实现",
+          "to_sememe": "aspiration|意愿"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "letter|信件",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "handle|处理",
+          "to_sememe": "police|警"
+        },
+        {
+          "role": "patient",
+          "from_sememe": "handle|处理",
+          "to_sememe": "affairs|事务"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "disease|疾病",
+          "to_sememe": "inflamed|发炎"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "disease|疾病",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "means",
+          "from_sememe": "method|方法",
+          "to_sememe": "handle|处理"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "request|要求",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "CoEvent",
+          "from_sememe": "fact|事情",
+          "to_sememe": "rescue|救助"
+        },
+        {
+          "role": "domain",
+          "from_sememe": "rescue|救助",
+          "to_sememe": "medical|医"
+        },
+        {
+          "role": "manner",
+          "from_sememe": "rescue|救助",
+          "to_sememe": "urgent|急"
+        },
+        {
+          "role": "purpose",
+          "from_sememe": "rescue|救助",
+          "to_sememe": "resume|恢复"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    },
+    {
+      "node_id": "Urgency|缓急",
+      "label_en": "Urgency",
+      "label_zh": "缓急",
+      "affect_polarity": "neutral",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 6,
+      "frequency": 7,
+      "role_edge_counts": {
+        "content": 1,
+        "host": 4,
+        "modifier": 1
+      },
+      "neighbor_sememes": [
+        "Seriousness|严重性",
+        "despise|轻视",
+        "event|事件",
+        "fact|事情",
+        "urgent|急"
+      ],
+      "example_sense_ids": [
+        "000000025373",
+        "000000226786",
+        "000000231210",
+        "000000267276",
+        "000000270597"
+      ],
+      "role_edges": [
+        {
+          "role": "content",
+          "from_sememe": "despise|轻视",
+          "to_sememe": "Seriousness|严重性"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Seriousness|严重性",
+          "to_sememe": "event|事件"
+        },
+        {
+          "role": "host",
+          "from_sememe": "despise|轻视",
+          "to_sememe": "Urgency|缓急"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Urgency|缓急",
+          "to_sememe": "event|事件"
+        },
+        {
+          "role": "host",
+          "from_sememe": "Urgency|缓急",
+          "to_sememe": "fact|事情"
+        },
+        {
+          "role": "modifier",
+          "from_sememe": "Urgency|缓急",
+          "to_sememe": "urgent|急"
+        }
+      ],
+      "polarity_adjudicated": "U"
+    },
+    {
+      "node_id": "hopeful|有望",
+      "label_en": "hopeful",
+      "label_zh": "有望",
+      "affect_polarity": "pos",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 12,
+      "frequency": 13,
+      "role_edge_counts": {},
+      "neighbor_sememes": [],
+      "example_sense_ids": [
+        "000000093622",
+        "000000093623",
+        "000000093625",
+        "000000156808",
+        "000000156809"
+      ],
+      "role_edges": [],
+      "polarity_adjudicated": "P"
+    },
+    {
+      "node_id": "irritate|激怒",
+      "label_en": "irritate",
+      "label_zh": "激怒",
+      "affect_polarity": "neg",
+      "polarity_source": "curated",
+      "n_senses_in_hownet": 48,
+      "frequency": 49,
+      "role_edge_counts": {
+        "scope": 1,
+        "target": 1,
+        "quantity": 1,
+        "agent": 1
+      },
+      "neighbor_sememes": [
+        "able|能",
+        "human|人",
+        "many|多"
+      ],
+      "example_sense_ids": [
+        "000000043700",
+        "000000058772",
+        "000000058773",
+        "000000058821",
+        "000000058822"
+      ],
+      "role_edges": [
+        {
+          "role": "scope",
+          "from_sememe": "able|能",
+          "to_sememe": "irritate|激怒"
+        },
+        {
+          "role": "target",
+          "from_sememe": "irritate|激怒",
+          "to_sememe": "human|人"
+        },
+        {
+          "role": "quantity",
+          "from_sememe": "human|人",
+          "to_sememe": "many|多"
+        },
+        {
+          "role": "agent",
+          "from_sememe": "human|人",
+          "to_sememe": "irritate|激怒"
+        }
+      ],
+      "polarity_adjudicated": "N"
+    }
+  ]
 }
