@@ -1,5 +1,5 @@
 {
-  "version": "v1",
+  "version": "v1.1",
   "generated_at": "2026-04-28T09:29:04.426443+00:00",
   "source_ontology": "ontology\\extraction\\outputs\\extracted_subontology_v0.json",
   "source_ontology_version": "v0",
@@ -1237,7 +1237,8 @@
       ],
       "node_label_en": "emotion",
       "node_label_zh": "情感",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "CoEvent→excited|激动; manner→accidental|偶发; RelateTo→feeling|情绪; CoEvent→believe|相信; adjunct→neg|否"
     },
     {
       "node_id": "feeling|情绪",
@@ -1358,7 +1359,8 @@
       ],
       "node_label_en": "feeling",
       "node_label_zh": "情绪",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "RelateTo→feeling|情绪; modifier→mixed|杂; RelateTo→feeling|情绪"
     },
     {
       "node_id": "experience|感受",
@@ -1913,7 +1915,8 @@
       ],
       "node_label_en": "experience",
       "node_label_zh": "感受",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "CoEvent→look|看; CoEvent→perception|感知; content→safe|安; RelateTo→part|部件; domain→physiology|生理学"
     },
     {
       "node_id": "perception|感知",
@@ -2351,7 +2354,8 @@
       ],
       "node_label_en": "perception",
       "node_label_zh": "感知",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "adjunct→neg|否; content→important|重要; means→look|看; scope→perception|感知; content→$"
     },
     {
       "node_id": "sense|感觉",
@@ -2512,7 +2516,8 @@
       ],
       "node_label_en": "sense",
       "node_label_zh": "感觉",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "whole→implement|器具; instrument→sense|感觉; domain→physiology|生理学; whole→beast|走兽; whole→AnimalHuman|动物"
     },
     {
       "node_id": "Countenance|表情",
@@ -2771,7 +2776,8 @@
       ],
       "node_label_en": "Countenance",
       "node_label_zh": "表情",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "scope→Countenance|表情; scope→speak|说; host→human|人; scope→tired|疲乏; modifier→austere|冷峻"
     },
     {
       "node_id": "ShowEmotion|表示情感",
@@ -2877,7 +2883,8 @@
       ],
       "node_label_en": "ShowEmotion",
       "node_label_zh": "表示情感",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "domain→politics|政; modifier→extensive|泛; purpose→ShowEmotion|表示情感; content→emotion|情感; CoEvent→angry|生气"
     },
     {
       "node_id": "ShowGoodEmotion|表示好情感",
@@ -2925,7 +2932,8 @@
       ],
       "node_label_en": "ShowGoodEmotion",
       "node_label_zh": "表示好情感",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "content→express|表示; time→ShowGoodEmotion|表示好情感; PartOfTouch→part|部件; PartPosition→body|身; domain→physiology|生理学"
     },
     {
       "node_id": "ShowBadEmotion|表示坏情感",
@@ -2945,7 +2953,8 @@
       ],
       "node_label_en": "ShowBadEmotion",
       "node_label_zh": "表示坏情感",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "(no role edges in HowNet)"
     },
     {
       "node_id": "EmotionalityValue|感情特性值",
@@ -3015,7 +3024,8 @@
       ],
       "node_label_en": "EmotionalityValue",
       "node_label_zh": "感情特性值",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "CoEvent→excited|激动; CoEvent→angry|生气; CoEvent→sorrowful|悲哀; RelateTo→feeling|情绪; manner→EmotionalityValue|感情特性值"
     },
     {
       "node_id": "FeelingByGood|好情",
@@ -3035,7 +3045,8 @@
       ],
       "node_label_en": "FeelingByGood",
       "node_label_zh": "好情",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "(no role edges in HowNet)"
     },
     {
       "node_id": "FeelingByBad|坏情",
@@ -3221,7 +3232,8 @@
       ],
       "node_label_en": "FeelingByBad",
       "node_label_zh": "坏情",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "PatientValue→PropertyValue|特性值; scope→AptTo|易于; domain→entertainment|艺; domain→literature|文; modifier→PropertyValue|特性值"
     },
     {
       "node_id": "fear|害怕",
@@ -3606,7 +3618,8 @@
       ],
       "node_label_en": "fear",
       "node_label_zh": "害怕",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "adjunct→neg|否; cause→fear|害怕; time→undergo|经受; content→Circumstances|境况; scope→urge|促使"
     },
     {
       "node_id": "joyful|喜悦",
@@ -3889,7 +3902,8 @@
       ],
       "node_label_en": "joyful",
       "node_label_zh": "喜悦",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "experiencer→human|人; modifier→ordinary|普通; quantity→mass|众; CoEvent→joyful|喜悦; PatientValue→joyful|喜悦"
     },
     {
       "node_id": "miserable|悲惨",
@@ -4117,7 +4131,8 @@
       ],
       "node_label_en": "miserable",
       "node_label_zh": "悲惨",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "manner→miserable|悲惨; host→group|群体; host→human|人; modifier→miserable|悲惨; content→Circumstances|境况"
     },
     {
       "node_id": "sorrowful|悲哀",
@@ -4246,7 +4261,8 @@
       ],
       "node_label_en": "sorrowful",
       "node_label_zh": "悲哀",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "degree→extreme|极; manner→sorrowful|悲哀; result→forget|忘记; content→sorrowful|悲哀; condition→joyful|喜悦"
     },
     {
       "node_id": "happy|幸福",
@@ -4384,7 +4400,8 @@
       ],
       "node_label_en": "happy",
       "node_label_zh": "幸福",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "modifier→beautiful|美; modifier→happy|幸福; location→reside|住下; agent→humanized|拟人; content→Living|生活状况"
     },
     {
       "node_id": "sad|忧愁",
@@ -4601,7 +4618,8 @@
       ],
       "node_label_en": "sad",
       "node_label_zh": "忧愁",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "means→drink|喝; patient→alcohol|酒; patient→emotion|情感; CoEvent→sad|忧愁; cause→farewell|离别"
     },
     {
       "node_id": "lonely|孤",
@@ -4732,7 +4750,8 @@
       ],
       "node_label_en": "lonely",
       "node_label_zh": "孤",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "location→ProvideFor|供养; patient→human|人; modifier→lonely|孤; domain→military|军; modifier→lonely|孤"
     },
     {
       "node_id": "shy|羞愧",
@@ -4798,7 +4817,8 @@
       ],
       "node_label_en": "shy",
       "node_label_zh": "羞愧",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "CoEvent→shy|羞愧; modifier→serious|严重; content→shy|羞愧; time→meet|会面; partner→human|人"
     },
     {
       "node_id": "shameless|没羞",
@@ -4835,7 +4855,8 @@
       ],
       "node_label_en": "shameless",
       "node_label_zh": "没羞",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "scope→shameless|没羞; scope→shameless|没羞; degree→extreme|极; experiencer→shameless|没羞"
     },
     {
       "node_id": "Pride|傲气",
@@ -4855,7 +4876,8 @@
       ],
       "node_label_en": "Pride",
       "node_label_zh": "傲气",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "host→human|人; modifier→enemy|敌; modifier→arrogant|傲"
     },
     {
       "node_id": "arrogant|傲",
@@ -4975,7 +4997,8 @@
       ],
       "node_label_en": "arrogant",
       "node_label_zh": "傲",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "adjunct→neg|否"
     },
     {
       "node_id": "calm|镇静",
@@ -5024,7 +5047,8 @@
       ],
       "node_label_en": "calm",
       "node_label_zh": "镇静",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "manner→calm|镇静; content→calm|镇静; manner→calm|镇静; content→calm|镇静"
     },
     {
       "node_id": "ardent|热情",
@@ -5107,7 +5131,8 @@
       ],
       "node_label_en": "ardent",
       "node_label_zh": "热情",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "modifier→ardent|热情; descriptive→ardent|热情; CoEvent→ShowLove|示爱; manner→ardent|热情; means→touch|触"
     },
     {
       "node_id": "passionate|有情",
@@ -5224,7 +5249,8 @@
       ],
       "node_label_en": "passionate",
       "node_label_zh": "有情",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "CoEvent→passionate|有情"
     },
     {
       "node_id": "optimistic|乐观",
@@ -5269,7 +5295,8 @@
       ],
       "node_label_en": "optimistic",
       "node_label_zh": "乐观",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "modifier→optimistic|乐观; modifier→optimistic|乐观; host→animate|生物; host→group|群体; modifier→optimistic|乐观"
     },
     {
       "node_id": "pessimistic|悲观",
@@ -5348,7 +5375,8 @@
       ],
       "node_label_en": "pessimistic",
       "node_label_zh": "悲观",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "modifier→pessimistic|悲观; modifier→pessimistic|悲观"
     },
     {
       "node_id": "FondOf|喜欢",
@@ -5601,7 +5629,8 @@
       ],
       "node_label_en": "FondOf",
       "node_label_zh": "喜欢",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "adjunct→neg|否; scope→FondOf|喜欢; content→$; adjunct→neg|否; content→FondOf|喜欢"
     },
     {
       "node_id": "love|爱",
@@ -6002,7 +6031,8 @@
       ],
       "node_label_en": "love",
       "node_label_zh": "爱",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "CoEvent→love|爱; duration→time|时间; TimeSect→night|夜; quantity→single|单; time→look|看"
     },
     {
       "node_id": "BeInLove|恋爱",
@@ -6228,7 +6258,8 @@
       ],
       "node_label_en": "BeInLove",
       "node_label_zh": "恋爱",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "TimeFeature→festival|节; TimeSect→day|日; time→congratulate|祝贺; agent→human|人; host→human|人"
     },
     {
       "node_id": "like|爱惜",
@@ -6445,7 +6476,8 @@
       ],
       "node_label_en": "like",
       "node_label_zh": "爱惜",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "adjunct→neg|否; target→place|地方; PlaceSect→country|国家; domain→politics|政; location→ComeToWorld|问世"
     },
     {
       "node_id": "hate|仇恨",
@@ -6502,7 +6534,8 @@
       ],
       "node_label_en": "hate",
       "node_label_zh": "仇恨",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "CoEvent→hate|仇恨; modifier→strong|强; CoEvent→hate|仇恨; means→emotion|情感; modifier→righteous|正义"
     },
     {
       "node_id": "disgust|厌恶",
@@ -6762,7 +6795,8 @@
       ],
       "node_label_en": "disgust",
       "node_label_zh": "厌恶",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "adjunct→neg|否; scope→urge|促使; ResultEvent→disgust|厌恶; experiencer→disgust|厌恶; content→tour|旅游"
     },
     {
       "node_id": "jealous|妒忌",
@@ -6843,7 +6877,8 @@
       ],
       "node_label_en": "jealous",
       "node_label_zh": "妒忌",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "CoEvent→jealous|妒忌; target→human|人; modifier→able|能; experiencer→jealous|妒忌"
     },
     {
       "node_id": "grateful|感激",
@@ -6879,7 +6914,8 @@
       ],
       "node_label_en": "grateful",
       "node_label_zh": "感激",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "degree→very|很; adjunct→neg|否; CoEvent→grateful|感激; CoEvent→hate|仇恨; cause→enjoy|享受"
     },
     {
       "node_id": "regret|抱歉",
@@ -6921,7 +6957,8 @@
       ],
       "node_label_en": "regret",
       "node_label_zh": "抱歉",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "CoEvent→regret|抱歉; degree→very|很; adjunct→neg|否"
     },
     {
       "node_id": "worried|着急",
@@ -7014,7 +7051,8 @@
       ],
       "node_label_en": "worried",
       "node_label_zh": "着急",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "condition→predict|预料; adjunct→neg|否; content→time|时间; manner→present|现在; degree→very|很"
     },
     {
       "node_id": "surprise|惊奇",
@@ -7166,7 +7204,8 @@
       ],
       "node_label_en": "surprise",
       "node_label_zh": "惊奇",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "content→express|表示; time→surprise|惊奇; scope→urge|促使; ResultEvent→surprise|惊奇; modifier→able|能"
     },
     {
       "node_id": "excite|感动",
@@ -7259,7 +7298,8 @@
       ],
       "node_label_en": "excite",
       "node_label_zh": "感动",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "scope→excite|感动; agent→excite|感动; duration→TimeShort|短时间; degree→very|很"
     },
     {
       "node_id": "enjoy|享受",
@@ -7414,7 +7454,8 @@
       ],
       "node_label_en": "enjoy",
       "node_label_zh": "享受",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "manner→PropertyValue|特性值; manner→enjoy|享受; content→fortunate|好运; scope→eat|吃; scope→look|看"
     },
     {
       "node_id": "SeekPleasure|寻欢",
@@ -7688,7 +7729,8 @@
       ],
       "node_label_en": "SeekPleasure",
       "node_label_zh": "寻欢",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "CoEvent→TakeCare|照料; manner→lascivious|淫; RelateTo→SeekPleasure|寻欢; means→mating|交配; HostOf→Occupation|职位"
     },
     {
       "node_id": "ShowJoy|示喜",
@@ -7708,7 +7750,8 @@
       ],
       "node_label_en": "ShowJoy",
       "node_label_zh": "示喜",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "content→express|表示; time→ShowJoy|示喜"
     },
     {
       "node_id": "ShowLove|示爱",
@@ -7802,7 +7845,8 @@
       ],
       "node_label_en": "ShowLove",
       "node_label_zh": "示爱",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "means→CausePartMove|部件他移; cause→ShowLove|示爱; means→touch|触; instrument→part|部件; manner→improper|不当"
     },
     {
       "node_id": "ExpressAnger|示怒",
@@ -7822,7 +7866,8 @@
       ],
       "node_label_en": "ExpressAnger",
       "node_label_zh": "示怒",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "(no role edges in HowNet)"
     },
     {
       "node_id": "tease|取乐",
@@ -8041,7 +8086,8 @@
       ],
       "node_label_en": "tease",
       "node_label_zh": "取乐",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "instrument→human|人; modifier→female|女; manner→tease|取乐; instrument→tease|取乐; agent→tease|取乐"
     },
     {
       "node_id": "willing|愿意",
@@ -8136,7 +8182,8 @@
       ],
       "node_label_en": "willing",
       "node_label_zh": "愿意",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "concession→suffer|遭受; content→mishap|劫难; content→engage|从事; CoEvent→willing|愿意; belong→human|人"
     },
     {
       "node_id": "unwilling|不愿",
@@ -8156,7 +8203,8 @@
       ],
       "node_label_en": "unwilling",
       "node_label_zh": "不愿",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "scope→unwilling|不愿; content→reveal|揭露; content→inferior|不如; content→suffer|遭受; content→IllTreat|慢待"
     },
     {
       "node_id": "voluntary|自愿",
@@ -8214,7 +8262,8 @@
       ],
       "node_label_en": "voluntary",
       "node_label_zh": "自愿",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "agent→engage|从事; manner→voluntary|自愿; location→InstitutePlace|场所; CoEvent→TakeCare|照料; manner→voluntary|自愿"
     },
     {
       "node_id": "aspiration|意愿",
@@ -8624,7 +8673,8 @@
       ],
       "node_label_en": "aspiration",
       "node_label_zh": "意愿",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "CoEvent→expect|期望; restrictive→time|时间; TimeSect→lifespan|终生; CoEvent→willing|愿意; belong→human|人"
     },
     {
       "node_id": "eager|急切",
@@ -8670,7 +8720,8 @@
       ],
       "node_label_en": "eager",
       "node_label_zh": "急切",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "content→excrete|排泄; manner→eager|急切; degree→extreme|极; content→succeed|成功; scope→do|做"
     },
     {
       "node_id": "urgent|急",
@@ -8859,7 +8910,8 @@
       ],
       "node_label_en": "urgent",
       "node_label_zh": "急",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "degree→extreme|极; modifier→urgent|急; adjunct→neg|否; CoEvent→need|需求; modifier→urgent|急"
     },
     {
       "node_id": "Urgency|缓急",
@@ -8879,7 +8931,8 @@
       ],
       "node_label_en": "Urgency",
       "node_label_zh": "缓急",
-      "affect_polarity": "neutral"
+      "affect_polarity": "neutral",
+      "role_hint": "content→Seriousness|严重性; host→event|事件; host→Urgency|缓急; host→event|事件; host→fact|事情"
     },
     {
       "node_id": "hopeful|有望",
@@ -8904,7 +8957,8 @@
       ],
       "node_label_en": "hopeful",
       "node_label_zh": "有望",
-      "affect_polarity": "pos"
+      "affect_polarity": "pos",
+      "role_hint": "(no role edges in HowNet)"
     },
     {
       "node_id": "irritate|激怒",
@@ -8984,7 +9038,37 @@
       ],
       "node_label_en": "irritate",
       "node_label_zh": "激怒",
-      "affect_polarity": "neg"
+      "affect_polarity": "neg",
+      "role_hint": "scope→irritate|激怒; target→human|人; quantity→many|多; agent→irritate|激怒"
     }
-  ]
+  ],
+  "schema_documentation": {
+    "release_scope": "EN/ZH BabelNet-harvested candidates bundled with sparse-language flags.",
+    "harvest_method": "EN and ZH candidate lists are automatically harvested from the OpenHowNet bundle (Dong & Dong 2010; Qi et al. 2019), which packages BabelNet synsets (Qi et al. 2022). Candidates are not per-item annotated by human raters.",
+    "contrast_with_JA_KO": "JA/KO records in candidates_JA.jsonl and candidates_KO.jsonl are produced by trained linguist annotators native to each language; each candidate carries a three-way correspondence tag (full / partial / no_correspondence), a free-text register note, and source metadata. This annotation depth reflects the construction (rather than harvest) methodology.",
+    "field_mapping": {
+      "node_id": "node_id (identical across files)",
+      "node_label_en": "label_en (JA/KO use 'label_en' for clarity)",
+      "node_label_zh": "label_zh",
+      "candidates.EN_candidates": "en_seed_examples (JA/KO carry only the seed subset used as anchor)",
+      "candidates.ZH_candidates": "zh_seed_examples",
+      "babelnet_synset_ids": "(EN/ZH only) BabelNet synset IDs backing each node",
+      "candidate_count_total": "(EN/ZH only) total harvest yield",
+      "sparse_languages": "(EN/ZH only) languages with zero coverage in the bundle (always ['JA', 'KO'] here)",
+      "affect_polarity": "polarity (JA/KO use 'polarity' for the same field)",
+      "role_hint": "derived from source ontology role_edges; present in both EN/ZH (post-v1.1) and JA/KO records to provide HowNet structural grounding"
+    },
+    "schema_version_history": [
+      {
+        "version": "v1",
+        "release_date": "2026-04-28",
+        "change": "Initial release; role_hint absent from EN/ZH bundle."
+      },
+      {
+        "version": "v1.1",
+        "release_date": "2026-07-11",
+        "change": "Added role_hint field (derived from source ontology role_edges) and this schema_documentation block."
+      }
+    ]
+  }
 }
